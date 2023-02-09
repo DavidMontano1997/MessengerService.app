@@ -12,40 +12,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container"">
-        <div class="row">
-            <div class="col-12 text-center">
+    <div class="container">
+        <div class="row vh-100">
+            <div class="col-12 text-center d-flex justify-content-center align-items-center">
+                <div class="card pt-50">
+                    <h1>CipherText</h1>
+                    <i class="bi bi-person-circle"></i>
+                    
+                    <div class="card-body">
+                        <form>
+                            <div class="mt-4 mb-4">
+                                <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
 
-                <!-- card login -->
-                <section style="width: 35%; margin: 30px auto;">
-                    <div class="row">
-                        <!-- logo -->
-                        <div class="col-12">
-                            <h1>CipherText</h1>
-                            <i class="bi bi-person-circle"></i>
-                        </div>
-                        <!-- formulary -->
-                        <div class="col-12">
-                            <form>
-                                <div class="mt-4 mb-4">
-                                    <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div class="mb-4">
+                                <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <div id="passwordHelp" class="form-text">
+                                    Tengo problemas he
+                                    <a href="#">olvidado mi contraseña</a>
                                 </div>
-                                <div class="mb-4">
-                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
-                                    <div id="passwordHelp" class="form-text">
-                                        Tengo problemas he
-                                        <a href="#">olvidado mi contraseña</a>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                            </div>
 
-                        </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
-                </section>
-
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,24 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+
+// Modificando la paleta de colores.
+
+$custom_color_1: #082032;
+$custom_color_2: #2C394B;
+// $custom_color_3: #334756;
+$custom_color_4: #FF4C29;
+
+$theme-colors: (
+  "primary":    $custom_color_1,
+  "secondary":  $custom_color_2,
+  "success":    $custom_color_4,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+);
+
+$theme-colors: map-remove($theme-colors,"light", "dark");
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/bootstrap";

@@ -36,13 +36,6 @@ function cifrar(string){
             });
 
             otro_array.push(coinicdencia2[1]);
-            // let coinicdencia2 = nuevoArray.find( code_letter => {
-            //     console.log(code_letter);
-
-            //     if(code_letter[0] === letter) {
-            //         return code_letter[1];
-            //     };
-            // });
         });
 
         return otro_array;
@@ -70,5 +63,5 @@ function cifrar(string){
     return FraseCifrada.join("");
 };
 
-const erick = cifrar("erick y dylan toman tete todo los dias"); 
-console.log(erick);
+const respuesta = cifrar("dylan"); 
+console.log(respuesta);

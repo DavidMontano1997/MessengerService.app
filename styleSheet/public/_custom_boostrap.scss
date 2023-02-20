@@ -2,10 +2,12 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/variables-dark";
 
+// Fuente paleta de colores: https://colorhunt.co/palette/0820322c394b334756ff4c29
 // Modificando la paleta de colores.
 $custom_color_1: #082032;
 $custom_color_2: #2C394B;
 $custom_color_4: #FF4C29;
+$custom_color_btn: white;
 
 $theme-colors: (
   "primary":    $custom_color_1,
@@ -18,11 +20,20 @@ $theme-colors: (
 
 $theme-colors: map-remove($theme-colors,"light", "dark");
 
-
 @import "../../node_modules/bootstrap/scss/maps";
-
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/utilities";
-@import "../../node_modules/bootstrap/scss/buttons";
-
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Modificando apariencia de los botones en estado activo
+.btn:hover {
+  opacity: 0.9;
+  color:white
+}
+
+.btn,
+.btn-check:checked + .btn, 
+:not(.btn-check) + .btn:active, 
+.btn:first-child:active,
+.btn.active, 
+.btn.show {
+  color:white
+}

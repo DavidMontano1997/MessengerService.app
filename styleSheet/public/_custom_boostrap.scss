@@ -4,9 +4,9 @@
 
 // Fuente paleta de colores: https://colorhunt.co/palette/0820322c394b334756ff4c29
 // Modificando la paleta de colores.
-$custom_color_1: #082032;
-$custom_color_2: #2C394B;
-$custom_color_4: #FF4C29;
+$custom_color_1  : #082032;
+$custom_color_2  : #2C394B;
+$custom_color_4  : #FF4C29;
 $custom_color_btn: white;
 
 $theme-colors: (
@@ -19,6 +19,13 @@ $theme-colors: (
 );
 
 $theme-colors: map-remove($theme-colors,"light", "dark");
+
+// Modificando estilo de fuente
+$font-family-base: 'Inconsolata', monospace;
+$font-size-base  : 1.125rem;
+$font-weight-base: $font-weight-medium; //  variable de boostrap "_reboot.scss"
+
+// $body-bg         : $custom_color_2;
 
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/bootstrap";

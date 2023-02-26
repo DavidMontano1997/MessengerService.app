@@ -21,9 +21,9 @@ $theme-colors: (
 $theme-colors: map-remove($theme-colors,"light", "dark");
 
 // Modificando estilo de fuente
-$font-family-base: 'Inconsolata', monospace;
-$font-size-base  : 1.125rem;
-$font-weight-base: $font-weight-medium; //  variable de boostrap "_reboot.scss"
+$font-family-base: 'Roboto', sans-serif;;
+$font-size-base  :1.063rem;
+$font-weight-base: $font-weight-normal; //  variable de boostrap
 
 // $body-bg         : $custom_color_2;
 

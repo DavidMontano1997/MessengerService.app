@@ -1,0 +1,7 @@
+¿En que vamos a trabajar hoy?
+
+=> Perzonalizar la seccion de login
+    1-Definir diseño logo (boostrap)
+    2-Definir background del body(boostrap)
+    3-Quitarle los bordes a la tarjeta (boostrap)
+    4-Agregarle una sombra a la tarjtea (boostrap)

@@ -18,17 +18,17 @@ $theme-colors: (
   "danger":     $danger,
 );
 
-$theme-colors: map-remove($theme-colors,"light", "dark");
+// $theme-colors: map-remove($theme-colors,"light", "dark");
 
 // Modificando estilo de tipografia y fuente
 $font-family-base    : 'Roboto', sans-serif;
 $font-size-base      : 1.063rem; // 17px
 $font-weight-base    : $font-weight-normal;//  variable de boostrap 
-$headings-font-weight: 900;                // variable de boostrap (h1,h2,h3 ect..)
-// $h1-font-size: 2.353; //  $font-size-base * 2.5
+$headings-font-weight: 900; // variable de boostrap (h1,h2,h3 ect..)
 
+// Modificando background body
+$body-bg         : $custom_color_2;
 
-// $body-bg         : $custom_color_2;
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 

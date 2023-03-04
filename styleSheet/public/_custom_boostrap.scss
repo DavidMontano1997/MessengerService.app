@@ -3,36 +3,45 @@
 @import "../../node_modules/bootstrap/scss/variables-dark";
 
 // Fuente paleta de colores: https://colorhunt.co/palette/0820322c394b334756ff4c29
-// Modificando la paleta de colores.
+// paleta de colores.
 $custom_color_1  : #082032;
 $custom_color_2  : #2C394B;
 $custom_color_4  : #FF4C29;
-$custom_color_btn: white;
+$custom_color_5  : white;
 
 $theme-colors: (
-  "primary":    $custom_color_1,
-  "secondary":  $custom_color_2,
-  "success":    $custom_color_4,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
+  "primary"  : $custom_color_1,
+  "secondary": $custom_color_2,
+  "success"  : $custom_color_4,
+  "info"     : $info,
+  "warning"  : $warning,
+  "danger"   : $danger,
+  "light"    : $custom_color_5
 );
 
-// $theme-colors: map-remove($theme-colors,"light", "dark");
-
-// Modificando estilo de tipografia y fuente
+// estilo de tipografia y fuente
 $font-family-base    : 'Roboto', sans-serif;
-$font-size-base      : 1.063rem; // 17px
+$font-size-base      : 1.125rem; // 18px
 $font-weight-base    : $font-weight-normal;//  variable de boostrap 
 $headings-font-weight: 900; // variable de boostrap (h1,h2,h3 ect..)
 
-// Modificando background body
+// color de fondo body
 $body-bg         : $custom_color_2;
+
+// sombras
+$box-shadow      : 0 .5rem 1rem $custom_color_1;
+$box-shadow-sm   : 0 0.235rem 0.470rem $custom_color_1;
+$box-shadow-lg   : 0 1rem 3rem $custom_color_1;
+$box-shadow-inset: inset 0 1px 2px $custom_color_1;
+
+// campos formularios
+$input-bg      : $custom_color_5;
+$input-focus-bg: $custom_color_5;
 
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Modificando apariencia de los botones en estado activo
+// apariencia de los botones en estado activo
 .btn:hover {
   opacity: 0.9;
   color:white

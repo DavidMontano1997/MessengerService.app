@@ -70,7 +70,7 @@
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg-rgb: 44, 57, 75;
+  --bs-body-bg-rgb: 8, 32, 50;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -89,8 +89,8 @@
   --bs-tertiary-color-rgb: 33, 37, 41;
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
-  --bs-body-bg: #2C394B;
-  --bs-body-bg-rgb: 44, 57, 75;
+  --bs-body-bg: #082032;
+  --bs-body-bg-rgb: 8, 32, 50;
   --bs-link-color: #0d6efd;
   --bs-link-color-rgb: 13, 110, 253;
   --bs-link-decoration: underline;
@@ -108,10 +108,10 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-box-shadow: 0 0.5rem 1rem #082032;
-  --bs-box-shadow-sm: 0 0.235rem 0.47rem #082032;
-  --bs-box-shadow-lg: 0 1rem 3rem #082032;
-  --bs-box-shadow-inset: inset 0 1px 2px #082032;
+  --bs-box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15);
+  --bs-box-shadow-sm: 0 0.167rem 0.222rem #05131d;
+  --bs-box-shadow-lg: 0 1rem 3rem #05131d;
+  --bs-box-shadow-inset: inset 0 1px 2px #05131d;
   --bs-emphasis-color: #000;
   --bs-form-control-bg: var(--bs-body-bg);
   --bs-form-control-disabled-bg: var(--bs-secondary-bg);
@@ -7375,15 +7375,15 @@ textarea.form-control-lg {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem #082032 !important;
+  box-shadow: 0 0.5rem 1rem rgba(var(--bs-body-color-rgb), 0.15) !important;
 }
 
 .shadow-sm {
-  box-shadow: 0 0.235rem 0.47rem #082032 !important;
+  box-shadow: 0 0.167rem 0.222rem #05131d !important;
 }
 
 .shadow-lg {
-  box-shadow: 0 1rem 3rem #082032 !important;
+  box-shadow: 0 1rem 3rem #05131d !important;
 }
 
 .shadow-none {
@@ -12639,6 +12639,10 @@ textarea.form-control-lg {
 .btn.active,
 .btn.show {
   color: white;
+}
+
+.btn:active {
+  transform: scale(0.97);
 }
 
 .custom-h1 {

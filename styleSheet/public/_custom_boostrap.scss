@@ -8,6 +8,7 @@ $custom_color_1  : #082032;
 $custom_color_2  : #2C394B;
 $custom_color_4  : #FF4C29;
 $custom_color_5  : white;
+$custom_color_6  : #05131d; // box-shadow
 
 $theme-colors: (
   "primary"  : $custom_color_1,
@@ -26,13 +27,12 @@ $font-weight-base    : $font-weight-normal;//  variable de boostrap
 $headings-font-weight: 900; // variable de boostrap (h1,h2,h3 ect..)
 
 // color de fondo body
-$body-bg         : $custom_color_2;
+$body-bg         : $custom_color_1;
 
 // sombras
-$box-shadow      : 0 .5rem 1rem $custom_color_1;
-$box-shadow-sm   : 0 0.235rem 0.470rem $custom_color_1;
-$box-shadow-lg   : 0 1rem 3rem $custom_color_1;
-$box-shadow-inset: inset 0 1px 2px $custom_color_1;
+$box-shadow-sm   : 0 0.167rem 0.222rem $custom_color_6;
+$box-shadow-lg   : 0 1rem 3rem $custom_color_6;
+$box-shadow-inset: inset 0 1px 2px $custom_color_6;
 
 // campos formularios
 $input-bg      : $custom_color_5;
@@ -53,5 +53,10 @@ $input-focus-bg: $custom_color_5;
 .btn:first-child:active,
 .btn.active, 
 .btn.show {
-  color:white
+  color:white;
+  // transition: all 0.2s ease;
+}
+
+.btn:active{
+  transform: scale(0.97);
 }

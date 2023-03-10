@@ -41,6 +41,12 @@ $input-focus-bg: $custom_color_5;
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Cambio color h1
+.custom-h1 {
+  font-size: 40px;
+  color    : white;
+}
+
 // apariencia de los botones en estado activo
 .btn:hover {
   opacity: 0.9;

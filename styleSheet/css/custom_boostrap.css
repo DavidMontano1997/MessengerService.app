@@ -12627,6 +12627,11 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.custom-h1 {
+  font-size: 40px;
+  color: white;
+}
+
 .btn:hover {
   opacity: 0.9;
   color: white;
@@ -12645,9 +12650,4 @@ textarea.form-control-lg {
   transform: scale(0.97);
 }
 
-.custom-h1 {
-  font-size: 40px;
-  color: white;
-}
-
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=custom_boostrap.css.map */

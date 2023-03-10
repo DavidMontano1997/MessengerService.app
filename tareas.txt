@@ -1,8 +1,1 @@
-¿En que vamos a trabajar hoy?
-
-=> Perzonalizar la seccion de login
-    1-Definir diseño logo (boostrap)
-        background-color: #FF4C29; color: white;
-
-    4-Agregarle una sombra a la tarjtea (boostrap)
-        background-color: white; box-shadow: 0px 4px 8px #082032;
+plantilla: https://dashly-theme.com/index.html

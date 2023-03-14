@@ -1,0 +1,10 @@
+.col-navbar-left {
+  width: 260px;
+}
+@media (max-width: 768px) {
+  .col-navbar-left {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=dashboard.css.map */

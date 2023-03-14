@@ -1,0 +1,9 @@
+
+// navbar left
+.col-navbar-left{
+    width: 260px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}

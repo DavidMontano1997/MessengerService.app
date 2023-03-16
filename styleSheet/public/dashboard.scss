@@ -1,9 +1,15 @@
 
 // navbar left
-.col-navbar-left{
-    width: 260px;
+.col-navbar-left {
+    @media (min-width: 992px) {
+        width: 260px;
+    }
+}
 
-    @media (max-width: 768px) {
-        width: 100%;
+
+// section right
+.col-content-section {
+    @media (min-width: 992px) {
+        width: calc(100% - 260px);
     }
 }

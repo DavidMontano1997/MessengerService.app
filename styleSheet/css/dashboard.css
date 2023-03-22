@@ -1,12 +1,20 @@
-@media (min-width: 992px) {
-  .col-navbar-left {
-    width: 260px;
+.contenedor {
+  width: 100%;
+}
+.contenedor div:first-child {
+  width: 260px;
+}
+@media (max-width: 992px) {
+  .contenedor div:first-child {
+    width: 100%;
   }
 }
-
-@media (min-width: 992px) {
-  .col-content-section {
-    width: calc(100% - 260px);
+.contenedor div:last-child {
+  width: calc(100% - 260px);
+}
+@media (max-width: 992px) {
+  .contenedor div:last-child {
+    width: 100%;
   }
 }
 

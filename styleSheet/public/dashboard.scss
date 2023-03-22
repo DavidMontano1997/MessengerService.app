@@ -1,15 +1,21 @@
+.contenedor {
+    width: 100%;
 
-// navbar left
-.col-navbar-left {
-    @media (min-width: 992px) {
+    // navbar left
+    div:first-child {
         width: 260px;
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
     }
-}
 
-
-// section right
-.col-content-section {
-    @media (min-width: 992px) {
+    // section right
+    div:last-child {
         width: calc(100% - 260px);
+
+        @media (max-width: 992px) {
+            width: 100%;
+        }
     }
 }

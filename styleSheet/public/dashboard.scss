@@ -1,11 +1,13 @@
-.contenedor {
+@import "_navBarLeft.scss";
+
+.CP-container-main {
     width: 100%;
 
     // navbar left
     div:first-child {
         width: 260px;
 
-        @media (max-width: 992px) {
+        @media (max-width: 991px) {
             width: 100%;
         }
     }
@@ -14,7 +16,7 @@
     div:last-child {
         width: calc(100% - 260px);
 
-        @media (max-width: 992px) {
+        @media (max-width: 991px) {
             width: 100%;
         }
     }

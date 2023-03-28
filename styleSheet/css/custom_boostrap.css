@@ -8384,6 +8384,10 @@ textarea.form-control-lg {
   font-weight: bolder !important;
 }
 
+.fw-customClass {
+  font-weight: 900 !important;
+}
+
 .lh-1 {
   line-height: 1 !important;
 }

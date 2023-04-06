@@ -1,5 +1,22 @@
-.CP-logo {
-  color: red;
+nav .efect-hover {
+  background-color: #FF4C29;
+  border-radius: 4px;
+}
+nav #content-item-legal-issues ul {
+  list-style: none;
+}
+nav .content-count-settings {
+  display: block;
+  width: 236px;
+  position: absolute;
+  bottom: 24px;
+}
+@media (max-width: 991px) {
+  nav .content-count-settings {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
 }
 
 .CP-container-main {

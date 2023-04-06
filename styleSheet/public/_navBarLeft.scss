@@ -1,3 +1,28 @@
-.CP-logo {
-    color: red;
+nav {
+    // efecto hover para los items
+    .efect-hover {
+        background-color: #FF4C29;
+        border-radius: 4px;
+    }
+
+    // li -> contennedor de item temas legales junto con su lista.
+    #content-item-legal-issues {
+        ul {
+            list-style: none;
+        }
+    }
+
+    // span -> contenedor de los items cuenta y configuración.
+    .content-count-settings {
+        display : block;
+        width   : 236px;
+        position: absolute;
+        bottom  : 24px;
+
+        @media (max-width: 991px) {
+            width   : 100%;
+            position: relative;
+            bottom  : 0;
+        }
+    }
 }

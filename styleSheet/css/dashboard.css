@@ -5,6 +5,10 @@ nav .efect-hover {
 nav #content-item-legal-issues ul {
   list-style: none;
 }
+nav #content-item-legal-issues ul li > a {
+  color: white;
+  text-decoration: none;
+}
 nav .content-count-settings {
   display: block;
   width: 236px;
@@ -17,6 +21,12 @@ nav .content-count-settings {
     position: relative;
     bottom: 0;
   }
+}
+
+.icon-point {
+  height: 26px;
+  width: 20px;
+  color: #FF4C29;
 }
 
 .CP-container-main {

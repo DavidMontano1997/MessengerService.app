@@ -25,96 +25,151 @@
                     <div class="container-fluid d-lg-flex flex-lg-column w-100 h-100">
                         <a class="navbar-brand fs-4 text-center fw-customClass me-0 my-4" href="#">MESSENGERSERVICE</a>
 
+                        <!-- button mobile version -->
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#group_items" aria-controls="group_items" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
+                        <!-- items navigation -->
                         <div class="collapse navbar-collapse w-100 align-items-start" id="group_items">
                             <ul class="navbar-nav d-flex flex-column mb-2 mb-lg-0 w-100">
                                 <!-- item home -->
                                 <li class="nav-item">
-                                    <a class="nav-link active d-flex efect-hover" aria-current="page" href="#">
-                                        <i class="me-2 fs-5 bi bi-house-fill"></i>
-                                        <span class="d-flex align-items-center">Inicio</span>
+                                    <a class="nav-link active d-flex align-items-center" aria-current="page" href="#">
+                                        <!-- efecto-hover: icon point -->
+                                        <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+
+                                        <div class="d-flex align-items-center">
+                                            <i class="me-2 fs-5 bi bi-house-fill"></i>
+                                            <span class="flex-shrink-0">Inicio</span>
+                                        </div>
                                     </a>
                                 </li>
 
                                 <!-- item clients -->
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex" href="#">
-                                        <i class="me-2 fs-5 bi bi-person-vcard-fill"></i> 
-                                        <span class="d-flex align-items-center">Clientes</span>
+                                    <a class="nav-link  d-flex align-items-center" href="#">
+                                        <!-- efecto-hover: icon point -->
+                                        <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+
+                                        <div class="d-flex align-items-center">
+                                            <i class="me-2 fs-5 bi bi-person-vcard-fill"></i> 
+                                            <span class="flex-shrink-0">Clientes</span>
+                                        </div>
                                     </a>
                                 </li>
 
                                 <!-- item income record -->
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex" href="#">
-                                        <i class="me-2 fs-5 bi bi-wallet-fill"></i>
-                                        <span class="d-flex align-items-center">Registro de ingresos</span>
+                                    <a class="nav-link d-flex align-items-center" href="#">
+                                        <!-- efecto-hover: icon point -->
+                                        <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+
+                                        <div class="d-flex align-items-center">
+                                            <i class="me-2 fs-5 bi bi-wallet-fill"></i>
+                                            <span class="flex-shrink-0">Registro de ingresos</span>
+                                        </div>
                                     </a>
                                 </li>
 
                                 <!-- item expense record -->
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex" href="#">
-                                        <i class="me-2 fs-5 bi bi-receipt"></i>
-                                        <span class="d-flex align-items-center">Registro de gastos</span>
+                                    <a class="nav-link d-flex align-items-center" href="#">
+                                        <!-- efecto-hover: icon point -->
+                                        <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+
+                                        <div class="d-flex align-items-center">
+                                            <i class="me-2 fs-5 bi bi-receipt"></i>
+                                            <span class="flex-shrink-0">Registro de gastos</span>
+                                        </div>
                                     </a>
                                 </li>
 
                                 <!-- item reminder -->
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex" href="#">
-                                        <i class="me-2 fs-5 bi bi-alarm-fill"></i>
-                                        <span class="d-flex align-items-center">Recordatorios</span>
+                                    <a class="nav-link d-flex align-items-center" href="#">
+                                        <!-- efecto-hover: icon point -->
+                                        <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+                                        
+                                        <div class="d-flex align-items-center">
+                                            <i class="me-2 fs-5 bi bi-alarm-fill"></i>
+                                            <span>Recordatorios</span>
+                                        </div>
                                     </a>
                                 </li>
 
                                 <!-- item legal issues -->
                                 <li class="nav-item" id="content-item-legal-issues">
-                                    <a class="nav-link d-flex" data-bs-toggle="collapse" href="#legal-theme-list" role="button" aria-expanded="false" aria-controls="legal-theme-list">
-                                        <i class="me-2 fs-5 bi bi-bank2"></i>
-                                        <span class="d-flex align-items-center me-3">Temas legales</span>
-                                        <i class="bi bi-chevron-down d-flex align-items-center fs-6"></i>
+                                    <a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" href="#legal-theme-list" role="button" aria-expanded="false" aria-controls="legal-theme-list">
+                                        <!-- efecto-hover: icon point -->
+                                        <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+                                        
+                                        <div class="d-flex align-items-center">
+                                            <i class="me-2 fs-5 bi bi-bank2"></i>
+                                            <span class="me-3 flex-shrink-0">Temas legales</span>
+                                            <i class="bi bi-chevron-down d-flex align-items-center fs-6"></i>
+                                        </div>
                                     </a>
 
                                     <ul class="collapse fs-6" id="legal-theme-list">
-                                        <li><a class="pt-0 pb-0" href="#">
-                                            <!-- <i class="me-0 bi bi-dot" ></i> -->
-                                            Impuestos</a></li>
-                                        <li><a class="pt-0 pb-0" href="#">
-                                            <!-- <i class="me-0 bi bi-dot"></i> -->
-                                            Seguro vehicular</a></li>
-                                        <li><a class="pt-0 pb-0" href="#">
-                                            <!-- <i class="me-0 bi bi-dot"></i> -->
-                                            Placa de circulacion</a></li>
+                                        <!-- taxation -->
+                                        <li>
+                                            <a class="pt-0 pb-0 d-flex align-items-center" href="#">
+                                                <i class="d-none icon-point me-1 fs-1 me-0 bi bi-dot d-flex align-items-center justify-content-center"></i>
+                                                <span>Impuestos</span>
+                                            </a>
+                                        </li>
+
+                                        <!-- vehicle insurance -->
+                                        <li>
+                                            <a class="pt-0 pb-0 d-flex align-items-center" href="#">
+                                                <i class="d-none icon-point me-1 fs-2 me-0 bi bi-dot d-flex align-items-center justify-content-center"></i>
+                                                <span>Seguro vehicular</span>
+                                            </a>
+                                        </li>
+
+                                        <!-- circulation plate --> 
+                                        <li>
+                                            <a class="pt-0 pb-0 d-flex align-items-center" href="#">
+                                                <i class="d-none icon-point me-1 fs-2 me-0 bi bi-dot d-flex align-items-center justify-content-center"></i>
+                                                <span>Placa de circulacion</span>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
 
                                 <!-- items count and settings -->
-                                <span class="content-count-settings">
+                                <div class="content-count-settings">
                                     <!-- cuenta -->
                                     <li class="nav-item">
-                                        <a class="nav-link d-flex w-100" href="#">
-                                            <i class="me-2 fs-5 bi bi-person-circle"></i>
-                                            <span class="d-flex align-items-center">Cuenta</span>
+                                        <a class="nav-link d-flex align-items-center w-100" href="#">
+                                            <!-- efecto-hover: icon point -->
+                                            <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+
+                                            <div class="d-flex align-items-center">
+                                                <i class="me-2 fs-5 bi bi-person-circle"></i>
+                                                <span>Cuenta</span>
+                                            </div>
                                         </a>
                                     </li>
 
                                     <!-- configuracion -->
                                     <li class="nav-item">
                                         <a class="nav-link d-flex" href="#">
-                                            <i class="me-2 fs-5 bi bi-gear"></i>
-                                            <span class="d-flex align-items-center">Configuración</span>
+                                            <!-- efecto-hover: icon point -->
+                                            <i class="d-none icon-point fs-1 me-1 bi bi-dot d-flex align-items-center justify-content-center"></i>
+
+                                            <div class="d-flex align-items-center">
+                                                <i class="me-2 fs-5 bi bi-gear"></i>
+                                                <span>Configuración</span>
+                                            </div>
                                         </a>
                                     </li>
-                                </span>
+                                </div>
                             </ul>
                         </div>
                     </div>
                 </nav>
-            <!-- nav boostrap -->
         </div>
 
         <!-- Section right -->

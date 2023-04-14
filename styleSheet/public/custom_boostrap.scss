@@ -2,14 +2,8 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/variables-dark";
 
-// Fuente paleta de colores: https://colorhunt.co/palette/0820322c394b334756ff4c29
-
-// paleta de colores.
-$custom_color_1  : #082032;
-$custom_color_2  : #2C394B;
-$custom_color_4  : #FF4C29;
-$custom_color_5  : white;
-$custom_color_6  : #05131d; // box-shadow
+// variables propias del proyecto.
+@import "_variables.scss";
 
 $theme-colors: (
   "primary"  : $custom_color_1,
@@ -59,6 +53,7 @@ $utilities: map-merge(
 );
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
+
 // Cambio color h1
 .custom-h1 {
   font-size: 40px;

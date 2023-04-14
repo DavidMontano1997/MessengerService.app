@@ -1,9 +1,11 @@
 nav {
+    background-color: $custom_color_6;
+    
     // efecto hover para los items
-    .efect-hover {
-        background-color: #FF4C29;
-        border-radius: 4px;
-    }
+    // .efect-hover {
+    //     background-color: #FF4C29;
+    //     border-radius: 4px;
+    // }
 
     // li -> contennedor de item temas legales junto con su lista.
     #content-item-legal-issues {

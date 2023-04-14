@@ -1,6 +1,5 @@
-nav .efect-hover {
-  background-color: #FF4C29;
-  border-radius: 4px;
+nav {
+  background-color: #05131d;
 }
 nav #content-item-legal-issues ul {
   list-style: none;

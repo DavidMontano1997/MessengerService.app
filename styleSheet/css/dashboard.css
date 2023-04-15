@@ -1,31 +1,42 @@
-nav {
-  background-color: #05131d;
+nav.navbar a.navbar-brand {
+  color: white;
 }
-nav #content-item-legal-issues ul {
+nav.navbar button.navbar-toggler {
+  background-color: #FF4C29;
+}
+nav.navbar ul.container-list-items li a {
+  color: white;
+}
+nav.navbar ul.container-list-items li a i.icon-point {
+  display: none;
+  height: 26px;
+  width: 23px;
+  color: #FF4C29;
+}
+nav.navbar ul.container-list-items li a:hover i.icon-point {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav.navbar ul.container-list-items li#content-item-legal-issues ul {
   list-style: none;
 }
-nav #content-item-legal-issues ul li > a {
+nav.navbar ul.container-list-items li#content-item-legal-issues ul li a {
   color: white;
   text-decoration: none;
 }
-nav .content-count-settings {
+nav.navbar ul.container-list-items div#content-count-settings {
   display: block;
   width: 236px;
   position: absolute;
   bottom: 24px;
 }
 @media (max-width: 991px) {
-  nav .content-count-settings {
+  nav.navbar ul.container-list-items div#content-count-settings {
     width: 100%;
     position: relative;
     bottom: 0;
   }
-}
-
-.icon-point {
-  height: 26px;
-  width: 20px;
-  color: #FF4C29;
 }
 
 .CP-container-main {

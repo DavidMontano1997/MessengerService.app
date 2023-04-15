@@ -1,42 +1,53 @@
-nav {
-    background-color: $custom_color_6;
-    
-    // efecto hover para los items
-    // .efect-hover {
-    //     background-color: #FF4C29;
-    //     border-radius: 4px;
-    // }
+nav.navbar {
 
-    // li -> contennedor de item temas legales junto con su lista.
-    #content-item-legal-issues {
-        ul {
-            list-style: none;
+    a.navbar-brand { color: $custom_color_5; }
 
-            li > a {
-                color: white;
-                text-decoration: none;
+    button.navbar-toggler { background-color: $custom_color_4; }
+
+    ul.container-list-items {
+        li a {
+            color     : $custom_color_5;
+
+            // i -> punto efecto hover de los items
+            i.icon-point{
+                display   : none;
+                height    : 26px;
+                width     : 23px;
+                color     : #FF4C29;          
+            }
+
+            &:hover  i.icon-point{
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+            }
+
+        }
+
+        // li -> contenedor de item temas legales junto con su lista.
+        li#content-item-legal-issues {
+            ul {
+                list-style: none;
+
+                li a {
+                    color          : white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        // span -> contenedor de los items cuenta y configuración.
+        div#content-count-settings {
+            display : block;
+            width   : 236px;
+            position: absolute;
+            bottom  : 24px;
+
+            @media (max-width: 991px) {
+                width   : 100%;
+                position: relative;
+                bottom  : 0;
             }
         }
     }
-
-    // span -> contenedor de los items cuenta y configuración.
-    .content-count-settings {
-        display : block;
-        width   : 236px;
-        position: absolute;
-        bottom  : 24px;
-
-        @media (max-width: 991px) {
-            width   : 100%;
-            position: relative;
-            bottom  : 0;
-        }
-    }
-}
-
-// i -> punto efecto hover de los items
-.icon-point {
-    height: 26px; 
-    width: 20px;
-    color: #FF4C29;
 }

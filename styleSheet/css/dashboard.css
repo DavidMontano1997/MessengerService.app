@@ -6,17 +6,30 @@ nav.navbar button.navbar-toggler {
 }
 nav.navbar ul.container-list-items li a {
   color: white;
+  position: relative;
 }
 nav.navbar ul.container-list-items li a i.icon-point {
-  display: none;
-  height: 26px;
-  width: 23px;
-  color: #FF4C29;
-}
-nav.navbar ul.container-list-items li a:hover i.icon-point {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 23px;
+  height: 30px;
+  color: #FF4C29;
+  position: absolute;
+  z-index: 0;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+nav.navbar ul.container-list-items li a div.container-item-nav {
+  width: 100%;
+  transition: all 0.3s linear;
+  z-index: 1;
+}
+nav.navbar ul.container-list-items li a:hover i.icon-point {
+  opacity: 1;
+}
+nav.navbar ul.container-list-items li a:hover .container-item-nav {
+  margin-left: 23px;
 }
 nav.navbar ul.container-list-items li#content-item-legal-issues ul {
   list-style: none;

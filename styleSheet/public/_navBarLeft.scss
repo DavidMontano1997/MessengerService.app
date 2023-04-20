@@ -16,7 +16,7 @@ nav.navbar {
                 justify-content: center;
                 width          : 23px;
                 height         : 30px;
-                color          : #FF4C29;
+                color          : $custom_color_4;
                 position       : absolute;
                 z-index        : 0;
                 opacity        : 0;
@@ -66,5 +66,15 @@ nav.navbar {
                 bottom  : 0;
             }
         }
+    }
+}
+
+// Efecto activo de los items.
+.effect-active {
+    background-color: $custom_color_4;
+    border-radius   : 8px;
+    
+    div.container-item-nav {
+        margin-left: 23px;
     }
 }

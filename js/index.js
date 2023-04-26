@@ -1,7 +1,8 @@
-import { route } from "./modules/route.js";
+import ROUTE from "./modules/route.js";
 
 document.addEventListener("DOMContentLoaded", Main);
 
 function Main(){
-    console.log(route);
+
+    console.log(ROUTE);
 };

@@ -1,5 +1,17 @@
-export const route = {
-    inicio          : "../../views/home.html",
-    cliente         : "../../views/clients.html",
-    registroIngresos: "../../views/incomeRecord.html"
-};
+// Contiene todas las rutas de vistas de la barra de navegacion izquierdad.
+const ROUTE = Object.freeze(
+    {
+        inicio          : "../../views/home.html",
+        cliente         : "../../views/clients.html",
+        registroIngresos: "../../views/incomeRecord.html",
+        RegistroDeGastos: "../../views/expenseRecord.html",
+        recordatorios   : "../../views/reminder.html",
+        impuestos       : "../../views/taxation.html",
+        seguroVehicular : "../../views/vehicleInsurance.html",
+        placaCirculacion: "../../views/circulationPlate.html",
+        miCuenta        : "../../views/myAccount.html",
+        configuracion   : "../../views/configuration.html"
+    }
+);
+
+export default ROUTE;

@@ -2,7 +2,7 @@
 const ROUTE = Object.freeze(
     {
         inicio          : "../../views/home.html",
-        cliente         : "../../views/clients.html",
+        clientes        : "../../views/clients.html",
         registroIngresos: "../../views/incomeRecord.html",
         RegistroDeGastos: "../../views/expenseRecord.html",
         recordatorios   : "../../views/reminder.html",

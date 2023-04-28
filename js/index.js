@@ -1,30 +1,12 @@
-import ROUTE from "./modules/route.js";
+import Router from "./modules/router.js";
 
 document.addEventListener("DOMContentLoaded", Main);
 
 function Main(){
+    const ParentDOMElemen = document.querySelector("#sectionMain");
+    const ROUTER          = new Router(ParentDOMElemen);
 
     window.addEventListener("hashchange", (e) => {
-        const hash = window.location.hash;
-        const view = hash.split("/")[1];
-        console.log(view);
-        
-        if(views in ROUTE){
-            // fetch(ROUTE.views)
-            // .then((Response) => Response.ok ? Response.text() : console.error(Response.statusText))
-            // .then((html) => {
-            //     document.querySelector(".col-content-section").innerHTML = html;
-            // })
-            console.log(ROUTE.view);
-        } else {
-            console.log("error");
-        }
-    
+        ROUTER.startRouter();
     });
-
-
-       
-        
-
-    // console.log(ROUTE);
 };

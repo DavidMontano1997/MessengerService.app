@@ -10,7 +10,8 @@ const ROUTE = Object.freeze(
         seguroVehicular : "../../views/vehicleInsurance.html",
         placaCirculacion: "../../views/circulationPlate.html",
         miCuenta        : "../../views/myAccount.html",
-        configuracion   : "../../views/configuration.html"
+        configuracion   : "../../views/configuration.html",
+        error           : "../../views/error.html"
     }
 );
 

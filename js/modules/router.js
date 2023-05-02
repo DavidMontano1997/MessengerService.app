@@ -26,7 +26,7 @@ export default class Router {
         if(VIEW in ROUTE){ 
             return `${ROUTE[VIEW]}`;
         } else {
-            throw Error("error de enrutamiento");
+            return ROUTE.error;
         }
     };
 };

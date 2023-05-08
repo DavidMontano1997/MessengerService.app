@@ -63,19 +63,19 @@ nav.navbar ul.container-list-items div#content-count-settings {
 .CP-container-main {
   width: 100%;
 }
-.CP-container-main div:first-child {
+.CP-container-main div.col-navbar-left {
   width: 260px;
 }
 @media (max-width: 991px) {
-  .CP-container-main div:first-child {
+  .CP-container-main div.col-navbar-left {
     width: 100%;
   }
 }
-.CP-container-main div:last-child {
+.CP-container-main div.sectionMain {
   width: calc(100% - 260px);
 }
 @media (max-width: 991px) {
-  .CP-container-main div:last-child {
+  .CP-container-main div.sectionMain {
     width: 100%;
   }
 }

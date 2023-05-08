@@ -6,7 +6,7 @@
     width: 100%;
 
     // navbar left
-    div:first-child {
+    div.col-navbar-left {
         width: 260px;
 
         @media (max-width: 991px) {
@@ -15,7 +15,7 @@
     }
 
     // section right
-    div:last-child {
+    div.sectionMain {
         width: calc(100% - 260px);
 
         @media (max-width: 991px) {

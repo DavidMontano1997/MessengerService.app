@@ -60,6 +60,14 @@ nav.navbar ul.container-list-items div#content-count-settings {
   margin-left: 23px;
 }
 
+.col-content-section #sectionMain {
+  background-color: white;
+  border-radius: 8px;
+  height: 95%;
+  width: 95%;
+  box-shadow: 0.167rem 0.167rem 0.278rem #041521;
+}
+
 .CP-container-main {
   width: 100%;
 }

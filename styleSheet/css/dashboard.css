@@ -67,6 +67,12 @@ nav.navbar ul.container-list-items div#content-count-settings {
   width: 95%;
   box-shadow: 0.167rem 0.167rem 0.278rem #041521;
 }
+@media (max-width: 991px) {
+  .col-content-section #sectionMain {
+    margin-top: 20px;
+    height: auto;
+  }
+}
 
 .CP-container-main {
   width: 100%;
@@ -79,12 +85,14 @@ nav.navbar ul.container-list-items div#content-count-settings {
     width: 100%;
   }
 }
-.CP-container-main div.sectionMain {
+.CP-container-main div.col-content-section {
   width: calc(100% - 260px);
+  height: 100%;
 }
 @media (max-width: 991px) {
-  .CP-container-main div.sectionMain {
+  .CP-container-main div.col-content-section {
     width: 100%;
+    height: auto;
   }
 }
 

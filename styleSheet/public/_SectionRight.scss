@@ -5,5 +5,10 @@
         height          : 95%;
         width           : 95%;
         box-shadow      : 0.167rem 0.167rem 0.278rem $custom_color_6;
+
+        @media (max-width: 991px) {
+            margin-top: 20px;
+            height    : auto;
+        }
     }
 }

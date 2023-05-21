@@ -16,11 +16,13 @@
     }
 
     // section right
-    div.sectionMain {
-        width: calc(100% - 260px);
+    div.col-content-section {
+        width : calc(100% - 260px);
+        height: 100%;
 
         @media (max-width: 991px) {
-            width: 100%;
+            width : 100%;
+            height: auto;
         }
     }
 }

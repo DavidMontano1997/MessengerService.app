@@ -1,5 +1,5 @@
 // Contiene todas las rutas de vistas de la barra de navegacion izquierdad.
-const ROUTE = Object.freeze(
+const ROUTES = Object.freeze(
     {
         inicio          : "../../views/home.html",
         clientes        : "../../views/clients.html",
@@ -15,4 +15,4 @@ const ROUTE = Object.freeze(
     }
 );
 
-export default ROUTE;
+export default ROUTES;

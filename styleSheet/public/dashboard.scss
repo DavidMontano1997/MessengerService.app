@@ -9,20 +9,22 @@
     // navbar left
     div.col-navbar-left {
         width: 260px;
+        height: 100vh;
 
         @media (max-width: 991px) {
             width: 100%;
+            height: auto;
         }
     }
 
     // section right
     div.col-content-section {
-        width : calc(100% - 260px);
-        height: 100%;
+        width  : calc(100% - 260px);
+        padding: 30px;
 
         @media (max-width: 991px) {
             width : 100%;
-            height: auto;
+            padding-top: 100px;
         }
     }
 }

@@ -17,9 +17,9 @@
     <title>Panel administrativo</title>
 </head>
 <body>
-    <div class="CP-container-main d-flex flex-lg-row flex-column vh-100">
+    <div class="CP-container-main d-flex flex-lg-row flex-column">
         <!-- navbar left -->
-        <div class="col-navbar-left">
+        <div class="col-navbar-left position-fixed start-0 z-1">
             <!-- nav boostrap -->
                 <nav class="navbar navbar-scroll navbar-expand-lg  h-100 py-lg-4 position-relative text-bg-secondary shadow-sm">
                     <div class="container-fluid d-lg-flex flex-lg-column w-100 h-100">
@@ -179,7 +179,7 @@
         </div>
 
         <!-- Section right -->
-        <div class="col-content-section d-flex flex-row justify-content-center align-items-center">
+        <div class="col-content-section position-absolute end-0 z-0">
             <div id="sectionMain" class="p-4"><!-- Aqui se va cargar las vistas por medio de javascript ---></div>
         </div>
     </div>

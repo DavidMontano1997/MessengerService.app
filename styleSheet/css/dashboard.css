@@ -90,5 +90,11 @@ nav.navbar ul.container-list-items div#content-count-settings {
     padding-top: 100px;
   }
 }
+@media (max-width: 768px) {
+  .CP-container-main div.col-content-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 /*# sourceMappingURL=dashboard.css.map */

@@ -1,6 +1,9 @@
 @import "_variables.scss";
-@import "_navBarLeft.scss"; // barra de navegacion izquierdad
-@import "_SectionRight.scss"; // Seccion de la derecha.
+@import "_navBarLeft.scss";// barra de navegacion izquierdad.
+@import "_SectionRight.scss";// Seccion de la derecha.
+
+// Vistas cargadas por el router y la barra de navegación.
+@import "_VIEW_home.scss"; // vista inicio.
 
 // contenedor principal
 .CP-container-main {

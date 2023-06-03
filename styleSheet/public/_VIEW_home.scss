@@ -1,0 +1,14 @@
+// IMPORTANTE!!!  Especificar el contenedor principal de la vista y apartir 
+//                de ahí definir las reglas css, con el objectivo de mantener dividido los estilos en el 
+//                documento "dashboard.css" y evitar que estos alteren el diseño de otras vistas.
+// 
+// Ejemplo:
+// 
+// #contenedorPrincipal {
+//     Aqui va todo el css referente a la vista.
+// }
+
+#component_view_home {
+    // ...escribir aquí
+}
+

@@ -28,6 +28,9 @@ $headings-font-weight: 900; // variable de boostrap (h1,h2,h3 ect..)
 $body-bg         : $custom_color_1;
 
 // sombras
+$enable-shadows : true; // habilitando sombras en general
+$card-box-shadow: 0px 2px 4px #cbcbcb; // definiendo sombras al componente card
+
 $box-shadow-sm   : 0.167rem 0.167rem 0.278rem $custom_color_6;
 $box-shadow-lg   : 0 1rem 3rem $custom_color_6;
 $box-shadow-inset: inset 0 1px 2px $custom_color_6;

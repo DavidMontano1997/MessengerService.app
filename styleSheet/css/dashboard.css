@@ -61,7 +61,7 @@ nav.navbar ul.container-list-items div#content-count-settings {
 }
 
 .col-content-section #sectionMain {
-  background-color: white;
+  background-color: rgb(249, 249, 249);
   border-radius: 8px;
   width: 100%;
   box-shadow: 0.167rem 0.167rem 0.278rem #041521;

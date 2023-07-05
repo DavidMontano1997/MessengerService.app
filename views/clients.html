@@ -1,1 +1,80 @@
-<h1 class="h1">CLIENTES</h1>
+<div id="component_view_clients">
+    <div class="row">
+        <!-- formulario de registro cliente -->
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-success mb-3">REGISTRO CLIENTE</h5>
+
+                    <form action="">
+                        <div class="row">
+                            <!-- columna izquierdad -->
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="client_name" class="form-label">Nombre/Razón social:</label>
+                                    <input type="text" class="form-control" id="client_name" placeholder="Messenger service and.co">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="client_phone" class="form-label">Telefono:</label>
+                                    <input type="text" class="form-control" id="client_phone" placeholder="xxxx - xxxx">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="client_address" class="form-label">Dirección:</label>
+                                    <input type="text" class="form-control" id="client_address" placeholder="calle # principal local...">
+                                </div>
+                            </div>
+
+                            <!-- columna derecha -->
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="client_ruc" class="form-label">Ruc:</label>
+                                    <input type="text" class="form-control" id="client_ruc" placeholder="XXXXXXX-X-XXX-X DVXX">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="client_email" class="form-label">Correo electronico:</label>
+                                    <input type="text" class="form-control" id="client_email" placeholder="CorreoElectronico@gmail.com">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="client_photo_profile" class="form-label">Foto de perifl:</label>
+                                    <input class="form-control" type="file" id="client_photo_profile">
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-3">
+                                <button type="submit" class="btn btn-info">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- tarjeta cliente -->
+        <div class="col-4">
+            <div class="card" style="height: 394px;">
+                <div class="card-body text-center">
+                    <div class="mb-2">
+                        <i style="font-size: 120px; color: gray;" class="bi bi-person-circle"></i>
+                    </div>
+
+                    <div>
+                        <p>MessengerServiceAnd.co</p>
+                        <p>222313-2-32345 DV60</p>
+                        <p>MessengerService@gmail.com</p>
+                        <p>6180 - 2770</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h1>Tabla clientes</h1>
+        </div>
+    </div>
+</div>

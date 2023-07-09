@@ -56,7 +56,18 @@ $utilities: map-merge(
         values: map-merge(map-get(map-get($utilities,"font-weight"),"values"),
         (customClass: $custom-font-weight))
       )
-    )
+    ), //<- final de propiedad font-weight
+
+    "width": map-merge(
+      map-get($utilities,"width"),
+      (
+        values: map-merge(map-get(map-get($utilities,"width"),"values"),
+        ( 
+          40: 40%,
+          45: 45% 
+        ))
+      )
+    ) //<- final de propiedad width
   )
 );
 

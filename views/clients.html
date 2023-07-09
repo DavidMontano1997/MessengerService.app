@@ -77,9 +77,41 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-3">
         <div class="col-12">
-            <h1>Tabla clientes</h1>
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex">
+                        <h5 class="card-title text-success mb-3 w-50 border">TABLA DE CLIENTES</h5>
+
+                        <!-- filtrar busquedad -->
+                        <div class="input-group mb-3 w-50 border">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Buscar por nombre">
+                            <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filtrar busquedad </button>
+
+                            <!-- lista de filtrado -->
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <div class="form-check dropdown-item">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_by_name">
+                                    <label class="form-check-label" for="filter_by_name">Por nombre</label>
+                                </div>
+                                
+                                <div class="form-check dropdown-item">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_by_email">
+                                    <label class="form-check-label" for="filter_by_email">Por correo</label>
+                                </div>
+
+                                <div class="form-check dropdown-item">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="filter_by_phone">
+                                    <label class="form-check-label" for="filter_by_phone">Por telefono</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- continuar aqui... -->
+                </div>
+            </div>
         </div>
     </div>
 </div>

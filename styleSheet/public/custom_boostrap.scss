@@ -48,6 +48,9 @@ $dropdown-link-hover-bg    : $custom_color_8;
 $dropdown-link-active-color: $custom_color_5;
 $dropdown-link-active-bg   : $custom_color_8;
 
+// input radio
+$form-check-input-bg : white;
+
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/utilities";
 

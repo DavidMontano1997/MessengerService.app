@@ -41,6 +41,13 @@ $box-shadow-inset: inset 0 1px 2px $custom_color_6;
 $input-bg      : $custom_color_5;
 $input-focus-bg: $custom_color_5;
 
+// boton dopdowns 
+$dropdown-bg               : $custom_color_5; // color del fondo del menu
+$dropdown-link-hover-color : $custom_color_5 ;
+$dropdown-link-hover-bg    : $custom_color_8;
+$dropdown-link-active-color: $custom_color_5;
+$dropdown-link-active-bg   : $custom_color_8;
+
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/utilities";
 

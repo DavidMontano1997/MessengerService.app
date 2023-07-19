@@ -67,6 +67,23 @@ nav.navbar ul.container-list-items div#content-count-settings {
   box-shadow: 0.167rem 0.167rem 0.278rem #041521;
 }
 
+#clients_view_container .client_card {
+  height: 394px;
+}
+#clients_view_container .client_card .profile_picture_container {
+  height: 180px;
+}
+#clients_view_container .client_card .profile_picture_container .profile_picture_icon {
+  font-size: 160px;
+  color: gray;
+  line-height: 180px;
+}
+#clients_view_container .table_card_clients table tbody .client_profile_photo {
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+}
+
 .CP-container-main {
   width: 100%;
 }

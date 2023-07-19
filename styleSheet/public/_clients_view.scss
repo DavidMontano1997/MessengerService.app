@@ -1,0 +1,27 @@
+#clients_view_container {
+    // tarjeta cliente
+    .client_card {
+        height: 394px;
+
+        .profile_picture_container {
+            height: 180px;
+
+            .profile_picture_icon {
+                font-size  : 160px;
+                color      : gray;
+                line-height: 180px;
+            }
+        }
+    }
+
+    // Tabla cliente => foto de perfil cliente
+    .table_card_clients {
+        table tbody {
+            .client_profile_photo {
+                border-radius: 8px;
+                width        : 40px;
+                height       : 40px;
+            }
+        }
+    }
+}

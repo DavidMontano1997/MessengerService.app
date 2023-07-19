@@ -51,6 +51,17 @@ $dropdown-link-active-bg   : $custom_color_8;
 // input radio
 $form-check-input-bg : white;
 
+// componente paginación
+$pagination-bg                 : $custom_color_5;
+$pagination-hover-color        : $custom_color_5;
+$pagination-hover-bg           : $custom_color_8;
+$pagination-hover-border-color : $custom_color_8;
+$pagination-active-color       : $custom_color_5;
+$pagination-active-bg          : $custom_color_1;
+$pagination-active-border-color: $custom_color_1;
+$pagination-focus-color        : $custom_color_5;
+$pagination-focus-bg           : $custom_color_8;
+
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/utilities";
 

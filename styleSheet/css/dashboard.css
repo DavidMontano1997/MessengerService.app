@@ -69,6 +69,7 @@ nav.navbar ul.container-list-items div#content-count-settings {
 
 #clients_view_container .client_card {
   height: 394px;
+  text-align: center;
 }
 #clients_view_container .client_card .profile_picture_container {
   height: 180px;
@@ -77,6 +78,17 @@ nav.navbar ul.container-list-items div#content-count-settings {
   font-size: 160px;
   color: gray;
   line-height: 180px;
+}
+@media (max-width: 991px) {
+  #clients_view_container .client_card {
+    height: auto;
+    text-align: justify;
+  }
+}
+@media (max-width: 575px) {
+  #clients_view_container .client_card {
+    text-align: center;
+  }
 }
 #clients_view_container .table_card_clients table tbody .client_profile_photo {
   border-radius: 8px;

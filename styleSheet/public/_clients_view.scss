@@ -24,13 +24,17 @@
         }
     }
 
-    // Tabla cliente => foto de perfil cliente
+    // Tabla clientes 
     .table_card_clients {
-        table tbody {
-            .client_profile_photo {
-                border-radius: 8px;
-                width        : 40px;
-                height       : 40px;
+        table {
+            min-width: 630px;
+
+            tbody {
+                .client_profile_photo { // => foto de perfil cliente
+                    border-radius: 8px;
+                    width        : 40px;
+                    height       : 40px;
+                }
             }
         }
 

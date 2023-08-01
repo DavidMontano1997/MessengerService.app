@@ -90,6 +90,9 @@ nav.navbar ul.container-list-items div#content-count-settings {
     text-align: center;
   }
 }
+#clients_view_container .table_card_clients table {
+  min-width: 630px;
+}
 #clients_view_container .table_card_clients table tbody .client_profile_photo {
   border-radius: 8px;
   width: 40px;

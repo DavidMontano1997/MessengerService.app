@@ -121,6 +121,18 @@ nav.navbar ul.container-list-items div#content-count-settings {
   }
 }
 
+#income_record_view_container .container_registered_invoices .registered_invoice {
+  color: #082032;
+}
+#income_record_view_container .container_registered_invoices .registered_invoice:hover {
+  background-color: #2192FF;
+  color: white;
+  cursor: pointer;
+}
+#income_record_view_container .container_registered_invoices .registered_invoice:hover .card-text {
+  color: white;
+}
+
 .CP-container-main {
   width: 100%;
 }

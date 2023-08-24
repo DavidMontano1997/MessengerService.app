@@ -1,0 +1,19 @@
+#income_record_view_container {
+    // Sección de facturas registradas
+    .container_registered_invoices {
+        // tarjeta de factura
+        .registered_invoice {
+            color : $custom_color_1;
+
+            &:hover {
+                background-color: $custom_color_8;
+                color           : $custom_color_5;
+                cursor          : pointer;
+    
+                .card-text {
+                    color: $custom_color_5;
+                }
+            }
+        }
+    }
+}

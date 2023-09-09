@@ -98,6 +98,10 @@ const router = (function (){
         GetRoutes(){
             return ROUTES;
         };
+
+        GetHash(){
+            return _getHash().split("/")[1];
+        };
     };
 })();
 

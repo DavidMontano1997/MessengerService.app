@@ -121,6 +121,14 @@ nav.navbar ul.container-list-items div#content-count-settings {
   }
 }
 
+#new_invoice #messaging-record-table #table-header {
+  background-color: #FF4C29;
+}
+#new_invoice #messaging-record-table .tabla-fila-mensajeria {
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
 #income_record_view_container .container_registered_invoices .registered_invoice {
   color: #082032;
 }

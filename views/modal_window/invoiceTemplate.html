@@ -7,49 +7,49 @@
                 </div>
 
                 <div class="modal-body">
-                    <div >
+                    <div class="container">
                         <!-- información del cliente -->
-                        <div class="container-fluid">
-                            <div class="row align-items-center">
-                                <div class="col-7">
-                                    <div class="row">
-                                        <div class="col-5 fw-bolder">Nombre de cliente:</div>
-                                        <div class="col-7 ps-0">Miguel bernal rosas</div>
-                                    </div>
-            
-                                    <div class="row">
-                                        <div class="col-5 fw-bolder">Fecha facturación:</div>
-                                        <div class="col-7 ps-0">Lunes 15 agosto del 2023</div>
-                                    </div>
-                                </div>
-    
-                                <!-- número de factura -->
-                                <div class="col-5">
-                                    <div class="row">
-                                        <div class="col-7 fw-bolder">Número de factura:</div>
-                                        <div class="col-5">150823</div>
-                                    </div>
-                                </div>
+                        <div class="row align-items-center">
+                            <div class="col-7 ps-0">
+                                <p class="mb-1">
+                                    <span class="fw-bolder">Nombre de cliente:</span>
+                                    <span class="ms-1">MARLIN LOGISTIC CORP S.A.</span>
+                                </p>
+                                <p>
+                                    <span class="fw-bolder">Fecha facturación:</span>
+                                    <span class="ms-2">Lunes 15 agosto del 2023</span>
+                                </p>
+                            </div>
+
+                            <div class="col-5">
+                                <p class="mb-1">
+                                    <span class="fw-bolder">Número de factura:</span>
+                                    <span class="ms-1">150823</span>
+                                </p>
                             </div>
                         </div>
-                        
-                        <!-- tabla de registro de mensajerias -->
-                        <div id="messaging-record-table" class="mt-4">
+                    
+                        <!-- tabla de mensajerias -->
+                        <div id="messaging-record-table">
                             <!-- cabecera tabla -->
-                            <div id="table-header">
-                                <div class="container-fluid">
-                                    <div class="row text-center p-1">
-                                        <div class="col-2 fw-bolder fs-5">Fecha</div>
-                                        <div class="col-8 fw-bolder fs-5">Descripción</div>
-                                        <div class="col-1 fw-bolder fs-5 p-0">Precio</div>
-                                        <div class="col-1"></div>
+                            <div class="row">
+                                <div id="table-header" class="p-1">
+                                    <div class="container-fluid">
+                                        <div class="row text-center">
+                                            <div class="col-2 fw-bolder fs-5">Fecha</div>
+                                            <div class="col-8 fw-bolder fs-5">Descripción</div>
+                                            <div class="col-1 fw-bolder fs-5 p-0">Precio</div>
+                                            <div class="col-1"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- cuerpo tabla -->
-                            <div class="fs-6 container-fluid overflow-auto" id="table-body">
+                            <div class="row">
+                                <div id="table-body" class="fs-6  overflow-auto">
                                 <!-- las mensajerias se estan cargando con javascript -->
+                                </div>
                             </div>
                         </div>
                     </div>

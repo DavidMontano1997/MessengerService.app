@@ -1,7 +1,16 @@
+/*
+    Variables de boostrap v5.3
+
+    $card-box-shadow
+    $card-border-width
+*/
+
 #new_invoice {
     #messaging-record-table {
         #table-header {
             background-color: $custom_color_4;
+            box-shadow      : $card-box-shadow;
+            border-bottom   : $card-border-width solid #d23d1f;
         }
 
         #table-body {

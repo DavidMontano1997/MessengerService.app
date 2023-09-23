@@ -1,4 +1,6 @@
-@import "_variables.scss";
+@import "_custom_boostrap.scss"; // boostrap v5.3
+
+@import "_variables.scss"; // variables porpias del proyecto
 @import "_navBarLeft.scss";// barra de navegacion izquierdad.
 @import "_SectionRight.scss";// Seccion de la derecha.
 @import "_clients_view.scss"; // vista clientes

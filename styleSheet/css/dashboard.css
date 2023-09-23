@@ -12991,9 +12991,13 @@ nav.navbar ul.container-list-items div#content-count-settings {
 
 /*
     Variables de boostrap v5.3
+    archivo: scss/_variables.scss
 
-    $card-box-shadow
+    $card-border-radius
     $card-border-width
+    $card-border-color
+    $card-box-shadow
+    $card-bg
 */
 #new_invoice #messaging-record-table #table-header {
   background-color: #FF4C29;
@@ -13002,6 +13006,15 @@ nav.navbar ul.container-list-items div#content-count-settings {
 }
 #new_invoice #messaging-record-table #table-body {
   height: 320px;
+}
+#new_invoice #messaging-record-table #table-body .registered-messaging-table-item {
+  border-radius: var(--bs-border-radius);
+  border: var(--bs-border-width) solid var(--bs-border-color-translucent);
+  background-color: white;
+  cursor: pointer;
+}
+#new_invoice #messaging-record-table #table-body .registered-messaging-table-item:hover {
+  border-color: #2192FF;
 }
 
 #income_record_view_container .container_registered_invoices .registered_invoice {

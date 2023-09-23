@@ -1,8 +1,12 @@
 /*
     Variables de boostrap v5.3
+    archivo: scss/_variables.scss
 
-    $card-box-shadow
+    $card-border-radius
     $card-border-width
+    $card-border-color
+    $card-box-shadow
+    $card-bg
 */
 
 #new_invoice {
@@ -15,6 +19,18 @@
 
         #table-body {
             height  : 320px;
+
+            // mensajerias
+            .registered-messaging-table-item {
+                border-radius   : $card-border-radius;
+                border          : $card-border-width solid $card-border-color;
+                background-color: $card-bg;
+                cursor          : pointer;
+
+                &:hover {
+                    border-color: $custom_color_8;
+                }
+            }
         }
     }
 }

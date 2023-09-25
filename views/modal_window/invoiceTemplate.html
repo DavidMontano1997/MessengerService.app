@@ -7,8 +7,8 @@
                 </div>
 
                 <div class="modal-body">
+                    <!-- información del cliente -->
                     <div class="container">
-                        <!-- información del cliente -->
                         <div class="row align-items-center">
                             <div class="col-7 ps-0">
                                 <p class="mb-1">
@@ -28,28 +28,22 @@
                                 </p>
                             </div>
                         </div>
-                    
-                        <!-- tabla de mensajerias -->
-                        <div id="messaging-record-table">
-                            <!-- cabecera tabla -->
-                            <div class="row">
-                                <div id="table-header" class="p-1">
-                                    <div class="container-fluid">
-                                        <div class="row text-center text-primary">
-                                            <div class="col-2 fw-bolder fs-5">Fecha</div>
-                                            <div class="col-8 fw-bolder fs-5">Descripción</div>
-                                            <div class="col-1 fw-bolder fs-5 p-0">Precio</div>
-                                            <div class="col-1"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
 
-                            <!-- cuerpo tabla -->
-                            <div class="row">
-                                <div id="table-body" class="fs-6  overflow-auto">
-                                <!-- las mensajerias se estan cargando con javascript -->
-                                </div>
+                    <!-- tabla mensajerias -->
+                    <div class="container" id="messaging-record-table">
+                        <!-- cabecera tabla -->
+                        <div class="row text-center text-primary p-1" id="table-header">
+                            <div class="col-2 fw-bolder fs-5">Fecha</div>
+                            <div class="col-8 fw-bolder fs-5">Descripción</div>
+                            <div class="col-1 fw-bolder fs-5 p-0">Precio</div>
+                            <div class="col-1"></div>
+                        </div>
+
+                        <!-- cuerpo tabla -->
+                        <div class="row">
+                            <div id="table-body" class="fs-6  overflow-auto" style="height  : 320px;">
+                            <!-- las mensajerias se estan cargando con javascript -->
                             </div>
                         </div>
                     </div>

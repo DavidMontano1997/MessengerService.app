@@ -13016,6 +13016,10 @@ nav.navbar ul.container-list-items div#content-count-settings {
 #new_invoice #messaging-record-table #table-body .registered-messaging-table-item:hover {
   border-color: #2192FF;
 }
+#new_invoice #messaging-record-table #table-footer {
+  border-top: var(--bs-border-width) solid #d23d1f;
+  background-color: #FF4C29;
+}
 
 #income_record_view_container .container_registered_invoices .registered_invoice {
   color: #082032;

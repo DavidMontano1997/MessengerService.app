@@ -32,5 +32,10 @@
                 }
             }
         }
+
+        #table-footer {
+            border-top      : $card-border-width solid #d23d1f;
+            background-color: $custom_color_4;
+        }
     }
 }

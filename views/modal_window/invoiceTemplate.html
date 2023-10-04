@@ -123,10 +123,17 @@
                     </div>
                 </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-green">Guardar factura</button>
-                    <button type="button" class="btn btn-success">Emitir factura</button>
+                <div class="modal-footer justify-content-between align-items-center">
+                    <!-- Estado de la factura -->
+                    <div>
+                        <p class="fs-6 mb-0 text-danger visually-hidden"><i class="bi bi-pencil-fill me-1"></i> Editado...</p>
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-green">Guardar factura</button>
+                        <button type="button" class="btn btn-success">Emitir factura</button>
+                    </div>
                 </div>
             </div>
         </div>

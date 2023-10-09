@@ -10,32 +10,39 @@
 */
 
 #new_invoice {
-    #messaging-record-table {
-        #table-header {
-            background-color: $custom_color_4;
-            box-shadow      : $card-box-shadow;
-            border-bottom   : $card-border-width solid #d23d1f;
-        }
+    #table-scroll-container {
+        min-width: 380px;
+        overflow : scroll;
+    
+        #messaging-record-table {
+            min-width  : 713px;
 
-        #table-body {
-            height  : 320px;
+            #table-header {
+                background-color: $custom_color_4;
+                box-shadow      : $card-box-shadow;
+                border-bottom   : $card-border-width solid #d23d1f;
+            }
 
-            // mensajerias
-            .registered-messaging-table-item {
-                border-radius   : $card-border-radius;
-                border          : $card-border-width solid $card-border-color;
-                background-color: $card-bg;
-                cursor          : pointer;
+            #table-body {
+                height  : 320px;
 
-                &:hover {
-                    border-color: $custom_color_8;
+                // mensajerías
+                .registered-messaging-table-item {
+                    border-radius   : $card-border-radius;
+                    border          : $card-border-width solid $card-border-color;
+                    background-color: $card-bg;
+                    cursor          : pointer;
+
+                    &:hover {
+                        border-color: $custom_color_8;
+                    }
                 }
             }
-        }
 
-        #table-footer {
-            border-top      : $card-border-width solid #d23d1f;
-            background-color: $custom_color_4;
+            #table-footer {
+                border-top      : $card-border-width solid #d23d1f;
+                background-color: $custom_color_4;
+            }
         }
     }
 }

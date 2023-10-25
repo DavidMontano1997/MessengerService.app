@@ -1,4 +1,8 @@
 @charset "UTF-8";
+#invoice-modal-window #invoice_template .modal-fullscreen-xl-down {
+  height: auto;
+}
+
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -12999,31 +13003,31 @@ nav.navbar ul.container-list-items div#content-count-settings {
     $card-box-shadow
     $card-bg
 */
-#new_invoice #table-scroll-container {
+#invoice_template #table-scroll-container {
   min-width: 380px;
   overflow: scroll;
 }
-#new_invoice #table-scroll-container #messaging-record-table {
+#invoice_template #table-scroll-container #messaging-record-table {
   min-width: 713px;
 }
-#new_invoice #table-scroll-container #messaging-record-table #table-header {
+#invoice_template #table-scroll-container #messaging-record-table #table-header {
   background-color: #FF4C29;
   box-shadow: 0px 2px 4px #cbcbcb;
   border-bottom: var(--bs-border-width) solid #d23d1f;
 }
-#new_invoice #table-scroll-container #messaging-record-table #table-body {
+#invoice_template #table-scroll-container #messaging-record-table #table-body {
   height: 320px;
 }
-#new_invoice #table-scroll-container #messaging-record-table #table-body .registered-messaging-table-item {
+#invoice_template #table-scroll-container #messaging-record-table #table-body .registered-messaging-table-item {
   border-radius: var(--bs-border-radius);
   border: var(--bs-border-width) solid var(--bs-border-color-translucent);
   background-color: white;
   cursor: pointer;
 }
-#new_invoice #table-scroll-container #messaging-record-table #table-body .registered-messaging-table-item:hover {
+#invoice_template #table-scroll-container #messaging-record-table #table-body .registered-messaging-table-item:hover {
   border-color: #2192FF;
 }
-#new_invoice #table-scroll-container #messaging-record-table #table-footer {
+#invoice_template #table-scroll-container #messaging-record-table #table-footer {
   border-top: var(--bs-border-width) solid #d23d1f;
   background-color: #FF4C29;
 }

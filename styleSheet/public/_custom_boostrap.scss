@@ -68,6 +68,16 @@ $form-select-bg: $custom_color_5;
 // componente ventana modal
 $modal-content-bg: $custom_color_5;
 
+// modificando el alto de la ventana modal ".modal-fullscreen-xl-down" , para eliminar el 
+// scroll del cuerpo de la ventana.
+#invoice-modal-window  {
+  #invoice_template {
+    .modal-fullscreen-xl-down {
+      height : auto; 
+    };
+  };
+};
+
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/utilities";
 

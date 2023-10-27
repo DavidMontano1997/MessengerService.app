@@ -13032,6 +13032,9 @@ nav.navbar ul.container-list-items div#content-count-settings {
   background-color: #FF4C29;
 }
 
+#income_record_view_container #container-billing-and-return-tables table select {
+  width: 125px;
+}
 #income_record_view_container .container_registered_invoices .registered_invoice {
   color: #082032;
 }

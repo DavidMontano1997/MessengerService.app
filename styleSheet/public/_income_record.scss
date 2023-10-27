@@ -1,6 +1,15 @@
 @import "_invoice_temple.scss"; // Ventana modal - factura.
 
 #income_record_view_container {
+    // contenedor de tabla resúmen de facturación y devolución de dinero.
+    #container-billing-and-return-tables {
+        table {
+            select {
+                width: 125px;
+            }
+        }
+    }
+
     // Sección de facturas registradas
     .container_registered_invoices {
         // tarjeta de factura

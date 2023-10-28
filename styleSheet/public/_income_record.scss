@@ -4,6 +4,8 @@
     // contenedor de tabla resúmen de facturación y devolución de dinero.
     #container-billing-and-return-tables {
         table {
+            min-width: 420px;
+
             select {
                 width: 125px;
             }

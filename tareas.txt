@@ -1,7 +1,0 @@
-plantilla: https://dashly-theme.com/index.html
-
-Tares para hoy: 
-
-1-Cambiar color de fuente de la barra de barra de navegacion [echo].
-2-Implementar animacion hover a los items de la barra de navegacion [].
-3-Cambiar grosor de la barra de navegacion en las versiones mobiles [echo].

@@ -3,11 +3,16 @@
 #income_record_view_container {
     // contenedor de tabla resúmen de facturación y devolución de dinero.
     #container-billing-and-return-tables {
-        table {
-            min-width: 420px;
 
-            select {
-                width: 125px;
+        div.container-scroll {
+            height  : 284px;
+
+            table {
+                min-width: 420px;
+    
+                select {
+                    width: 125px;
+                }
             }
         }
     }

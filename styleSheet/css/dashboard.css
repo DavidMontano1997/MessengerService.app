@@ -13041,15 +13041,18 @@ nav.navbar ul.container-list-items div#content-count-settings {
 #income_record_view_container #container-billing-and-return-tables div.container-scroll table select {
   width: 125px;
 }
-#income_record_view_container .container_registered_invoices .registered_invoice {
+#income_record_view_container .registered-invoices-section .registered-invoice-card-container {
+  max-width: 250px;
+}
+#income_record_view_container .registered-invoices-section .registered-invoice-card-container .registered_invoice {
   color: #082032;
 }
-#income_record_view_container .container_registered_invoices .registered_invoice:hover {
+#income_record_view_container .registered-invoices-section .registered-invoice-card-container .registered_invoice:hover {
   background-color: #2192FF;
   color: white;
   cursor: pointer;
 }
-#income_record_view_container .container_registered_invoices .registered_invoice:hover .card-text {
+#income_record_view_container .registered-invoices-section .registered-invoice-card-container .registered_invoice:hover .card-text {
   color: white;
 }
 

@@ -18,18 +18,24 @@
     }
 
     // Sección de facturas registradas
-    .container_registered_invoices {
-        // tarjeta de factura
-        .registered_invoice {
-            color : $custom_color_1;
+    .registered-invoices-section {
 
-            &:hover {
-                background-color: $custom_color_8;
-                color           : $custom_color_5;
-                cursor          : pointer;
+        // contenedor de la tarjeta
+        .registered-invoice-card-container {
+            max-width: 250px;
+
+            // tarjeta de factura registrada
+            .registered_invoice {
+                color : $custom_color_1;
     
-                .card-text {
-                    color: $custom_color_5;
+                &:hover {
+                    background-color: $custom_color_8;
+                    color           : $custom_color_5;
+                    cursor          : pointer;
+        
+                    .card-text {
+                        color: $custom_color_5;
+                    }
                 }
             }
         }

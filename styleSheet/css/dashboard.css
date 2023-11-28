@@ -13056,6 +13056,10 @@ nav.navbar ul.container-list-items div#content-count-settings {
   color: white;
 }
 
+#expense_record_container #container-card-source-money {
+  height: 428px;
+}
+
 .CP-container-main {
   width: 100%;
 }

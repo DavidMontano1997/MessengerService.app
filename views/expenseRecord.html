@@ -6,7 +6,56 @@
                 <div class="card-body">
                     <h5 class="card-title text-success mb-3">REGISTRO DE GASTO</h5>
 
+                    <form action="">
+                        <!-- fecha y monto -->
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <label for="" class="form-label">Fecha:</label>
+                                <input type="text" class="form-control" id="" placeholder="23/11/23">
+                            </div>
 
+                            <div class="col-6">
+                                <label for="" class="form-label">Monto:</label>
+                                <input type="text" class="form-control" id="" placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <!-- Categoría de gasto -->
+                        <div class="row mb-3">
+                            <label for="" class="col-6 col-form-label">Categoría de gasto:</label>
+                            <div class="col-6">
+                                <select class="form-select" aria-label="Seleccione categoría responsable del gasto" id="">
+                                    <option selected>Seleccionar</option>
+                                    <option value="">Operaciónes</option>
+                                    <option value="">Mantenimiento</option>
+                                    <option value="">No recurrentes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Fuentes de dinero -->
+                        <div class="row mb-3">
+                            <label for="" class="col-6 col-form-label">Fuente responsable:</label>
+                            <div class="col-6">
+                                <select class="form-select" aria-label="Seleccione fuente responsable del gasto" id="">
+                                    <option selected>Seleccionar</option>
+                                    <option value="">Fondo de operaciones</option>
+                                    <option value="">Fondo de ahorro</option>
+                                    <option value="">Ingreso actual</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Descripción del gasto -->
+                        <div class="mb-3">
+                            <label for="" class="form-label">Descripción:</label>
+                            <textarea class="form-control"  placeholder="Detalle del gasto..." id=""></textarea>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-info">Registrar gasto</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -7,5 +7,9 @@
     // contenedor de la tabla historial de gastos
     #expense-history-table-scroll {
         height: 349px;
+
+        table {
+            min-width: 830px;
+        }
     }
 };

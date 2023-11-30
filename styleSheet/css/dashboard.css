@@ -13059,6 +13059,9 @@ nav.navbar ul.container-list-items div#content-count-settings {
 #expense_record_container #container-card-source-money {
   height: 428px;
 }
+#expense_record_container #expense-history-table-scroll {
+  height: 349px;
+}
 
 .CP-container-main {
   width: 100%;

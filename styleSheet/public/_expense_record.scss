@@ -2,7 +2,18 @@
     // Tarjeta contenedora de las fuentes de dinero.
     #container-card-source-money {
         height: 428px;
-    };
+        
+        // aplicando scroll para evitar deformar las tarjetas fuentes de dinero.
+        @media (min-width:768px) and (max-width:1250px) {
+            #container-scroll-sources-money  {
+                overflow: scroll;
+
+                div.row {
+                    min-width: 495px;
+                }
+            }
+        }
+    }
 
     // contenedor de la tabla historial de gastos
     #expense-history-table-scroll {

@@ -13059,6 +13059,11 @@ nav.navbar ul.container-list-items div#content-count-settings {
 #expense_record_container #container-card-source-money {
   height: 428px;
 }
+@media (max-width: 1250px) {
+  #expense_record_container #container-card-source-money {
+    height: auto;
+  }
+}
 @media (min-width: 768px) and (max-width: 1250px) {
   #expense_record_container #container-card-source-money #container-scroll-sources-money {
     overflow: scroll;

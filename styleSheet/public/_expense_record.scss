@@ -2,6 +2,13 @@
     // Tarjeta contenedora de las fuentes de dinero.
     #container-card-source-money {
         height: 428px;
+
+        // restableciendo el alto de la tarjeta.
+        @media (max-width:1250px) {
+            & {
+                height: auto;
+            }
+        }
         
         // aplicando scroll para evitar deformar las tarjetas fuentes de dinero.
         @media (min-width:768px) and (max-width:1250px) {

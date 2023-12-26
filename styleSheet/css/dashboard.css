@@ -13072,11 +13072,8 @@ nav.navbar ul.container-list-items div#content-count-settings {
     min-width: 495px;
   }
 }
-#expense_record_container #expense-history-table-scroll {
-  height: 349px;
-}
 #expense_record_container #expense-history-table-scroll table {
-  min-width: 830px;
+  min-width: 964px;
 }
 
 .CP-container-main {

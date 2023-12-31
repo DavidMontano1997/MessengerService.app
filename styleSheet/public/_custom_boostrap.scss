@@ -95,11 +95,14 @@ $utilities: map-merge(
       )
     ), //<- final de propiedad font-weight
 
+    // Anchos en procentaje en base a su elemento padre.
     "width": map-merge(
       map-get($utilities,"width"),
       (
         values: map-merge(map-get(map-get($utilities,"width"),"values"),
         ( 
+          30:30%,
+          35: 35%,
           40: 40%,
           45: 45% 
         ))

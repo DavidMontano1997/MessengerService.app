@@ -13089,6 +13089,9 @@ nav.navbar ul.container-list-items div#content-count-settings {
     min-width: 510px;
   }
 }
+#component-view-myAccount #container-account-information-card img#company-logo {
+  min-width: 120px;
+}
 
 .CP-container-main {
   width: 100%;

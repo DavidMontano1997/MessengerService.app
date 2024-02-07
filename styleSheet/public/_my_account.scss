@@ -5,5 +5,10 @@
         @media (min-width: 768px) {
             min-width: 510px;
         };
+
+        // logo de la empresa.
+        img#company-logo {
+            min-width: 120px;
+        }
     };
 };

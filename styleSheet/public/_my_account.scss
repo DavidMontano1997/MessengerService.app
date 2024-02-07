@@ -1,0 +1,9 @@
+#component-view-myAccount {
+    // Definiendole ancho minimo al contenedor de la tarjeta información para evitar 
+    // que las dimesiones de pantalla desordenen el diseño.
+    #container-account-information-card {
+        @media (min-width: 768px) {
+            min-width: 510px;
+        };
+    };
+};

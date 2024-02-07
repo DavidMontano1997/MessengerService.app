@@ -13084,6 +13084,12 @@ nav.navbar ul.container-list-items div#content-count-settings {
   min-width: 964px;
 }
 
+@media (min-width: 768px) {
+  #component-view-myAccount #container-account-information-card {
+    min-width: 510px;
+  }
+}
+
 .CP-container-main {
   width: 100%;
 }

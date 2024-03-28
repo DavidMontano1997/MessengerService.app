@@ -78,6 +78,11 @@ $modal-content-bg: $custom_color_5;
   };
 };
 
+// Componente tooltips
+$tooltip-bg     : $custom_color_4;
+$tooltip-opacity: 1;
+$tooltip-color  : $custom_color_5;
+
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/utilities";
 

@@ -3,11 +3,18 @@
 // las caracteristicas necesarias para esta funcionalidad a todos los tooltips que existan en el proyecto.
 function TooltipGenerate(){
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-    const tooltipList        = [...tooltipTriggerList];
 
-    tooltipList.map(tooltipTriggerEl =>{
-        const element = new bootstrap.Tooltip(tooltipTriggerEl);
-    });
+    // No hay tooltips retorne.
+    if(tooltipTriggerList.length === 0) return
+
+    // En caso de que haya mas 1 elemento se procede a iterar.
+    if(tooltipTriggerList.length > 1) {
+        const tooltipList = [...tooltipTriggerList];    
+        tooltipList.forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    };
+
+    // En caso de que solo exista 1 elemento.
+    new bootstrap.Tooltip(tooltipTriggerList.item(0));  
 };
 
 export default TooltipGenerate;

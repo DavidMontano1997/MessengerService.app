@@ -13000,28 +13000,6 @@ nav.navbar ul.container-list-items div#content-count-settings {
   width: 40px;
   height: 40px;
 }
-@media (min-width: 700px) {
-  #clients_view_container .table_card_clients .title_container_and_filtered_search {
-    display: flex;
-    justify-content: space-between;
-  }
-  #clients_view_container .table_card_clients .client_table_title {
-    width: 35%;
-  }
-  #clients_view_container .table_card_clients .client_table_filtered_lookup {
-    width: 65%;
-  }
-}
-@media (min-width: 800px) {
-  #clients_view_container .table_card_clients .client_table_title {
-    width: 40%;
-    max-width: 220px;
-  }
-  #clients_view_container .table_card_clients .client_table_filtered_lookup {
-    width: 60%;
-    max-width: 430px;
-  }
-}
 
 /*
     Variables de boostrap v5.3

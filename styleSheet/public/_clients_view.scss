@@ -37,32 +37,5 @@
                 }
             }
         }
-
-        @media (min-width: 700px) {
-            .title_container_and_filtered_search {
-                display        : flex;
-                justify-content: space-between;
-            }
-
-            .client_table_title {
-                width: 35%;
-            }
-
-            .client_table_filtered_lookup {
-                width: 65%;
-            }
-        }
-
-        @media (min-width: 800px) {
-            .client_table_title {
-                width    : 40%;
-                max-width: 220px;
-            }
-
-            .client_table_filtered_lookup {
-                width    : 60%;
-                max-width: 430px;
-            }
-        }
     }
 }

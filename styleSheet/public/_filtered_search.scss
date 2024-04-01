@@ -1,1 +1,29 @@
 // Modulo encargado de cargar de forma general los estilos del componenete búsquedad filtrada.
+@media (min-width: 700px) {
+    .title-container-filtered-search { // contenedor principal.
+        display        : flex;
+        justify-content: space-between;
+    
+        .element-title {
+            width: 35%;
+        }
+
+        .filtered-search-element {
+            width: 65%;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .title-container-filtered-search {
+        .element-title {
+            width    : 40%;
+            max-width: 220px;
+        }
+    
+        .filtered-search-element {
+            width    : 60%;
+            max-width: 430px;
+        }
+    }
+}

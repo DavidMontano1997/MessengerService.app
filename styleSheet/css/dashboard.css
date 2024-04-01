@@ -12947,6 +12947,28 @@ nav.navbar ul.container-list-items div#content-count-settings {
   box-shadow: 0.167rem 0.167rem 0.278rem #041521;
 }
 
+@media (min-width: 700px) {
+  .title-container-filtered-search {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title-container-filtered-search .element-title {
+    width: 35%;
+  }
+  .title-container-filtered-search .filtered-search-element {
+    width: 65%;
+  }
+}
+@media (min-width: 800px) {
+  .title-container-filtered-search .element-title {
+    width: 40%;
+    max-width: 220px;
+  }
+  .title-container-filtered-search .filtered-search-element {
+    width: 60%;
+    max-width: 430px;
+  }
+}
 #clients_view_container .client_card {
   height: 394px;
   text-align: center;

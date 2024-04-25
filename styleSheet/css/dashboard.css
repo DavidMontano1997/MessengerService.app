@@ -13093,6 +13093,15 @@ nav.navbar ul.container-list-items div#content-count-settings {
   min-width: 120px;
 }
 
+@media (min-width: 992px) and (max-width: 1320px) {
+  #view_container_configuration #current_period_summary_container {
+    overflow: auto;
+  }
+  #view_container_configuration #current_period_summary_container #sumary {
+    width: 470px;
+  }
+}
+
 .CP-container-main {
   width: 100%;
 }

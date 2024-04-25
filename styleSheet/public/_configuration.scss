@@ -1,0 +1,12 @@
+#view_container_configuration {
+    // contenedor resúmen periodo acutal.
+    #current_period_summary_container {
+        @media (min-width: 992px) and (max-width: 1320px) {
+            overflow        : auto;
+
+            #sumary {
+                width           : 470px;
+            }
+        }
+    }
+}

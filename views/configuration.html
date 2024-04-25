@@ -50,65 +50,69 @@
                 <div class="card-body mb-2">
                     <h5 class="card-title text-success mb-3">RESUMEN PERIODO ACTUAL</h5>
 
-                    <!-- Nombre de registro -->
-                    <div class="row">
-                        <div class="col-12 col-sm-5 col-md-12 col-lg-12 col-xl-5 fw-bold"><p class="mb-2">Nombre de registro:</p></div>
-                        <div class="col-12 col-sm-7 col-md-12 col-lg-12 col-xl-7"><p class="mb-2">I QUINCENA DE AGOSTO 2024</p></div>
-                    </div>
-
-                    <!-- Facturas registradas -->
-                    <div class="row">
-                        <div class="col-12 col-sm-5 col-md-6 col-lg-12 col-xl-5 fw-bold pe-md-0"><p class="mb-2">Facturas registras:</p></div>
-                        <div class="col-12 col-sm-7 col-md-6 col-lg-12 col-xl-7 pe-md-0"><p class="mb-2">15 unid <span class="badge bg-info">(7 pagadas)</span></p></div>
-                    </div>
-
-                    <!-- Ingreso total / Gasto total -->
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                    <div id="current_period_summary_container">
+                        <div id="sumary">
+                            <!-- Nombre de registro -->
                             <div class="row">
-                                <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Ingreso total:</p></div>
-                                <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5"><p class="mb-2">$699.25</p></div>
+                                <div class="col-12 col-sm-5 col-md-12 col-lg-12 col-xl-5 fw-bold"><p class="mb-2">Nombre de registro:</p></div>
+                                <div class="col-12 col-sm-7 col-md-12 col-lg-12 col-xl-7"><p class="mb-2">I QUINCENA DE AGOSTO 2024</p></div>
                             </div>
-                        </div>
 
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                            <!-- Facturas registradas -->
                             <div class="row">
-                                <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2" data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Suma total de todos los gastos, sin importar la fuente que lo cubrió.">Gasto total:</p></div>
-                                <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5 ps-lg-0"><p class="mb-2">$235.66</p></div>
+                                <div class="col-12 col-sm-5 col-md-6 col-lg-12 col-xl-5 fw-bold pe-md-0"><p class="mb-2">Facturas registras:</p></div>
+                                <div class="col-12 col-sm-7 col-md-6 col-lg-12 col-xl-7 pe-md-0"><p class="mb-2">15 unid <span class="badge bg-info">(7 pagadas)</span></p></div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Fondo operaciones / Fondo ahorro-emergencia -->
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                            <!-- Ingreso total / Gasto total -->
                             <div class="row">
-                                <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Fondo OP:</p></div>
-                                <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5"><p class="mb-2">$19.30</p></div>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Ingreso total:</p></div>
+                                        <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5"><p class="mb-2">$699.25</p></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2" data-bs-toggle="tooltip"  data-bs-placement="top" data-bs-title="Suma total de todos los gastos, sin importar la fuente que lo cubrió.">Gasto total:</p></div>
+                                        <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5 ps-lg-0"><p class="mb-2">$235.66</p></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                            <!-- Fondo operaciones / Fondo ahorro-emergencia -->
                             <div class="row">
-                                <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Fondo AE:</p></div>
-                                <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5 ps-lg-0"><p class="mb-2">$256.87</p></div>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Fondo OP:</p></div>
+                                        <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5"><p class="mb-2">$19.30</p></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Fondo AE:</p></div>
+                                        <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-xl-5 ps-lg-0"><p class="mb-2">$256.87</p></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Recordatorios / Crédito -->
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                            <!-- Recordatorios / Crédito -->
                             <div class="row">
-                                <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-lg-7 col-xl-7 fw-bold pe-0"><p class="mb-2">Recordatorios:</p></div>
-                                <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-lg-5 col-xl-5"><p class="mb-2">8 unid.</p></div>
-                            </div>
-                        </div>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-lg-7 col-xl-7 fw-bold pe-0"><p class="mb-2">Recordatorios:</p></div>
+                                        <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-lg-5 col-xl-5"><p class="mb-2">8 unid.</p></div>
+                                    </div>
+                                </div>
 
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
-                            <div class="row">
-                                <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Crédito:</p></div>
-                                <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-lg-5 col-xl-5 ps-lg-0"><p class="mb-2">$12.63</p></div>
+                                <div class="col-12 col-sm-6 col-md-12 col-lg-6 col-xl-6">
+                                    <div class="row">
+                                        <div class="col-5 col-sm-7 col-md-6 col-lg-7 col-lg-7 col-xl-7 fw-bold"><p class="mb-2">Crédito:</p></div>
+                                        <div class="col-7 col-sm-5 col-md-6 col-lg-5 col-lg-5 col-xl-5 ps-lg-0"><p class="mb-2">$12.63</p></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

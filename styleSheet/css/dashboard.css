@@ -13101,6 +13101,9 @@ nav.navbar ul.container-list-items div#content-count-settings {
     width: 470px;
   }
 }
+#view_container_configuration #record-history-table {
+  min-width: 570px;
+}
 
 .CP-container-main {
   width: 100%;

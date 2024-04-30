@@ -12940,6 +12940,10 @@ nav.navbar ul.container-list-items div#content-count-settings {
   margin-left: 23px;
 }
 
+.CP-container-main .col-content-section #informativeAlertCurrentPeriod {
+  padding: 15px 36px;
+}
+
 .col-content-section #sectionMain {
   background-color: rgb(249, 249, 249);
   border-radius: 8px;

@@ -12945,6 +12945,12 @@ nav.navbar ul.container-list-items div#content-count-settings {
   border-radius: 8px;
   width: 100%;
   box-shadow: 0.167rem 0.167rem 0.278rem #041521;
+  padding: 20px;
+}
+@media (max-width: 576px) {
+  .col-content-section #sectionMain {
+    padding: 15px;
+  }
 }
 
 @media (min-width: 700px) {

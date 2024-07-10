@@ -1,108 +1,111 @@
-import ROUTES from "./routes.js"; // objecto con las rutas.
+import ROUTES from "./routes.js"; // rutas del proyecto.
 
-const router = (function (){
-    const _PARENT_DOM_ElEMENT = document.querySelector("#sectionMain");
-    const _URL              = window.location;
+class Router {
+    #PARENT_DOM_ElEMENT = document.querySelector("#sectionMain"); // elmento en el cuál se va a renderizar las vistas solicitadas por el cliente.
+    #URL = window.location;
 
-    function _getHash(){
-        return _URL.hash; 
-    };
+    async startRouter(){
+        
+        if(this.#PARENT_DOM_ElEMENT){
+            const HASH    = this.#getHash();             // obtiene el hash de la url.
+            const SECTION = this.#getNameSection(HASH);  // obtiene el nombre de la vita.
+            const ROUTE   = this.#getRoute(SECTION);     // obtiene la ruta de la vista.
     
-    function _getNameSection(HASH){
+            if(ROUTE) {
+                const RESPONSE = await this.#request(ROUTE); // obtiene componente html de la vista.
+    
+                if(RESPONSE){
+                    this.#WriteHTML(RESPONSE); // implementamos al DOM.
+                };
+            };
+        } else {
+            alert("Elemento padre no encontrado para renderizar el HTML <<#sectionMain>>");
+            throw new Error("Elemento padre no encontrado para renderizar el HTML <<#sectionMain>>");
+        }
+    };
+
+    #getHash(){
+        return this.#URL.hash;
+    };
+
+    #getNameSection(HASH){
         // Extraemos la información que hay después del #, ya que esta nos 
         // informa la sección a la que el usuario esta tratando de acceder.
-        console.log(HASH.split("/"));
         return HASH.split("/")[1];
     };
-    
-    function _getRoute(view){
+
+    #getRoute(view){
         if(!view){
             return `${ROUTES.inicio}`; // En caso de que no exista un hash se cargara la vista home. La cual sera la vista por default.
         } else if(view && view in ROUTES){
             return `${ROUTES[view]}`;  // Extraemos la ruta de la vista solicitada por el usuario.
         } else { 
             // Pagina no existente "Error 404".
-            const info = {
+            const INFO = {
                 status    : "404",
                 statusText: "Pagina no encontrada, estas tratando de acceder a una ruta que desconocemos..."
             };
 
-            _PrintError(info); // Mostramos un error en la pantalla.
+            this.#printError(INFO); // Mostramos un error en la pantalla.
             return null;
         };
     };
 
-    async function _Request(ROUTE){
+    async #request(ROUTE){
         let response;
 
         try {
-            const requestAjax  = await fetch(ROUTE);
-            const { ok, statusText, status } = requestAjax;
+            const REQUEST_AJAX  = await fetch(ROUTE);
+            const { ok, statusText, status } = REQUEST_AJAX;
 
             if(!ok){ // Peticion fallida.
-                const info = {
+                const INFO = {
                     status,
                     statusText
                 };
 
-                _PrintError(info); // // Mostramos un error en la pantalla.
+                this.#printError(INFO); // // Mostramos un error en la pantalla.
                 return response = ok;
             }
 
-            response = await requestAjax.text(); // retorna el component html a imprimir.
+            response = await REQUEST_AJAX.text();// retorna el component html a imprimir.
         } catch (error) {
-            console.error(error);
+            console.error("Error al realizar la petición:", error);
+            this.#printError({ status: "500", statusText: "Error interno del servidor" });
         };
 
         return response;
     };
 
-    function _PrintError(info){
-        const { status, statusText } = info;
-        const container = document.createElement("div");
+    #printError(INFO){
+        const { status, statusText } = INFO;
+        const CONTAINER = document.createElement("div");
 
-        container.className = "container d-flex flex-column justify-content-center align-items-center text-center";
-        container.style.height = "100%";
+        CONTAINER.className = "container d-flex flex-column justify-content-center align-items-center text-center";
+        CONTAINER.style.height = "100%";
 
-        container.innerHTML = `
+        CONTAINER.innerHTML = `
             <h2>ERROR ${status}</h2>
             <p>${statusText}</p>
             <button>Recargar pagina</button>
         `;
         
-        _PARENT_DOM_ElEMENT.innerHTML = "";
-        _PARENT_DOM_ElEMENT.appendChild(container);
+        this.#PARENT_DOM_ElEMENT.innerHTML = "";
+        this.#PARENT_DOM_ElEMENT.appendChild(CONTAINER);
         throw new Error(`${status} ${statusText}`);
     };
 
-    function _WriteHTML(html){
-        _PARENT_DOM_ElEMENT.innerHTML = html;
+    #WriteHTML(html){
+        this.#PARENT_DOM_ElEMENT.innerHTML = html;
     };
 
-    return class Router {
-        async startRouter(){
-            const HASH       = _getHash(); // obtiene el hash de la url.
-            const SECTION    = _getNameSection(HASH);  // obtiene el nombre de la pagina.
-            const ROUTE       = _getRoute(SECTION); // obtiene la ruta de la pagina.
-
-            if(ROUTE) {
-                const RESPONSE    = await _Request(ROUTE); // obtiene componente html de la pagina
-
-                if(RESPONSE){
-                    _WriteHTML(RESPONSE); // implementamos al DOM.
-                };
-            };
-        };
-
-        // retorna el las rutas del proyecto.
-        GetRoutes(){
-            return ROUTES;
-        };
-
-        GetHash(){
-            return _getHash().split("/")[1];
-        };
+    routes(){
+        return ROUTES;
     };
-})();
 
-export default router;
+    get view(){
+        return this.#getHash().split("/")[1];
+    };
+};
+
+export default Router;

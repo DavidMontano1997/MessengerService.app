@@ -87,16 +87,28 @@ class Router {
         CONTAINER.innerHTML = `
             <h2>ERROR ${status}</h2>
             <p>${statusText}</p>
-            <button class="btn btn-info">Volver atrás</button>
+            <button id="goBack" class="btn btn-info">Volver atrás</button>
         `;
         
         this.#PARENT_DOM_ElEMENT.innerHTML = "";
         this.#PARENT_DOM_ElEMENT.appendChild(CONTAINER);
+
+        // Volver atrás.
+        const backButton = document.querySelector("#goBack");
+        
+        if(backButton){
+            backButton.addEventListener("click",() => this.#goBack() );
+        };
+
         throw new Error(`${status} ${statusText}`);
     };
 
     #WriteHTML(html){
         this.#PARENT_DOM_ElEMENT.innerHTML = html;
+    };
+
+    #goBack(){
+        window.history.back();
     };
 
     routes(){

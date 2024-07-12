@@ -87,7 +87,7 @@ class Router {
         CONTAINER.innerHTML = `
             <h2>ERROR ${status}</h2>
             <p>${statusText}</p>
-            <button>Recargar pagina</button>
+            <button class="btn btn-info">Volver atrás</button>
         `;
         
         this.#PARENT_DOM_ElEMENT.innerHTML = "";

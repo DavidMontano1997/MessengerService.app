@@ -81,11 +81,9 @@ class Router {
         const { status, statusText } = INFO;
         const CONTAINER = document.createElement("div");
 
-        CONTAINER.className = "container d-flex flex-column justify-content-center align-items-center text-center";
-        CONTAINER.style.height = "100%";
-
+        CONTAINER.className = "container";
         CONTAINER.innerHTML = `
-            <h2>ERROR ${status}</h2>
+            <h2 class="text-danger">ERROR ${status}</h2>
             <p>${statusText}</p>
             <button id="goBack" class="btn btn-info">Volver atrás</button>
         `;

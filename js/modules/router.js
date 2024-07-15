@@ -85,7 +85,7 @@ class Router {
         CONTAINER.innerHTML = `
             <h2 class="text-danger">ERROR ${status}</h2>
             <p>${statusText}</p>
-            <button id="goBack" class="btn btn-info">Volver atrás</button>
+            ${status === '404' ? '<button id="goBack" class="btn btn-info">Volver atrás</button>' : ''}
         `;
         
         this.#PARENT_DOM_ElEMENT.innerHTML = "";

@@ -70,7 +70,6 @@ class Router {
 
             response = await REQUEST_AJAX.text();// retorna el component html a imprimir.
         } catch (error) {
-            console.error("Error al realizar la petición:", error);
             this.#printError({ status: "500", statusText: "Error interno del servidor" });
         };
 

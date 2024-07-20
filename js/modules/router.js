@@ -96,8 +96,6 @@ class Router {
         if(backButton){
             backButton.addEventListener("click",() => this.#goBack() );
         };
-
-        throw new Error(`${status} ${statusText}`);
     };
 
     #WriteHTML(html){

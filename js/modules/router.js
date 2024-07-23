@@ -47,7 +47,7 @@ class Router {
             };
 
             this.#printError(INFO); // Mostramos un error en la pantalla.
-            return null;
+            throw Error("Pagina no encontrada, estas tratando de acceder a una ruta que desconocemos.");
         };
     };
 

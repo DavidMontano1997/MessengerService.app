@@ -56,21 +56,27 @@ class Router {
 
         try {
             const REQUEST_AJAX  = await fetch(ROUTE);
-            const { ok, statusText, status } = REQUEST_AJAX;
+            const { ok, status } = REQUEST_AJAX;
 
             if(!ok){ // Peticion fallida.
                 const INFO = {
                     status,
-                    statusText
+                    statusText :`El recurso << ${ROUTE} >> no fue encontrado, por favor verifica la ruta a la que estas tratando de acceder.`
                 };
 
+                response = ok;
                 this.#printError(INFO); // // Mostramos un error en la pantalla.
-                return response = ok;
+                throw Error(`Error al tratar de obtener el recurso << ${ROUTE} >>`);
             }
 
             response = await REQUEST_AJAX.text();// retorna el component html a imprimir.
         } catch (error) {
-            this.#printError({ status: "500", statusText: "Error interno del servidor" });
+            console.error(error);
+
+            if(error instanceof TypeError){
+                response = false;
+                this.#printError({ status: "500", statusText: "No se pudo obtener el recurso, por favor compruebe su conxión a internet." });
+            };
         };
 
         return response;

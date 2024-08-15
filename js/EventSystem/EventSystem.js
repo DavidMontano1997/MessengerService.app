@@ -1,5 +1,6 @@
 class EventSystem {
     static #instance;
+    #events = {}; // almacena los eventos.
 
     constructor(){
         if(EventSystem.#instance){

@@ -19,6 +19,21 @@ class EventSystem {
         
         return EventSystem.#instance;
     };
+
+    registerEvent(eventName,configuration){
+        // eventName: nombre del evento.
+        // view     : la vista a la que va a pertencer el evento.
+        // service  : servicio/funcion a ejecutar.
+        
+        const { view, service} = configuration;
+        let collection = this.#events[view]; // los eventos son categorizados/agrupados por vista.
+
+        if(!collection) {
+            this.#events[view] = { [eventName] : service };
+        } else {
+            collection[eventName] = service;
+        };
+    };
 };
 
 export default EventSystem;

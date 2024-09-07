@@ -20,12 +20,34 @@ class EventSystem {
         return EventSystem.#instance;
     };
 
+    #validateProperties(eventName,configuration){
+        let { view, service} = configuration;
+
+        // Validar la existencia de las propiedades.
+        if(!view || !service){
+            throw Error("Las propiedades << view >> y << service >> son requeridas.")
+        };
+
+        // Validamos que sea el tipo de dato correcto: String.
+        if(typeof view !== "string"){
+            throw Error(`la propiedad << view >> debe ser de tipo string, recibido: << ${typeof view} >>`);
+        };
+
+        // Validamos que sea el tipo de dato correcto: function.
+        if(typeof service !== "function"){
+            throw Error(`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`);
+        };
+    };
+
     registerEvent(eventName,configuration){
         // eventName: nombre del evento.
         // view     : la vista a la que va a pertencer el evento.
         // service  : servicio/funcion a ejecutar.
         
         const { view, service} = configuration;
+
+        this.#validateProperties(eventName,configuration);
+
         let collection = this.#events[view]; // los eventos son categorizados/agrupados por vista.
 
         if(!collection) {

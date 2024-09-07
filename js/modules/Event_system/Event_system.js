@@ -39,13 +39,18 @@ class EventSystem {
         };
     };
 
+    #cleanString(string){
+        return string.toLowerCase().trim();
+    };
+
     registerEvent(eventName,configuration){
         // eventName: nombre del evento.
         // view     : la vista a la que va a pertencer el evento.
         // service  : servicio/funcion a ejecutar.
         
-        const { view, service} = configuration;
+        let { view, service} = configuration;
 
+        view = this.#cleanString(view); // limpiamos la cadena de texto.
         this.#validateProperties(eventName,configuration);
 
         let collection = this.#events[view]; // los eventos son categorizados/agrupados por vista.

@@ -50,7 +50,11 @@ class EventSystem {
         
         let { view, service} = configuration;
 
-        view = this.#cleanString(view); // limpiamos la cadena de texto.
+        // limpiamos la cadenas de texto.
+        eventName = this.#cleanString(eventName);
+        view      = this.#cleanString(view);
+
+        // validamos el tipo de dato de las propiedades.
         this.#validateProperties(eventName,configuration);
 
         let collection = this.#events[view]; // los eventos son categorizados/agrupados por vista.

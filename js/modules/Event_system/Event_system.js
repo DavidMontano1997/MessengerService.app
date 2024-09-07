@@ -31,6 +31,15 @@ class EventSystem {
         if(!collection) {
             this.#events[view] = { [eventName] : service };
         } else {
+
+            // Determinamos si ya hay un evento con el mismo nombre.
+            const coinciden = Object.keys(collection).includes(eventName);
+
+            if(coinciden){
+                throw Error(`Ya existe ese nombre de evento: ${eventName}`);
+            };
+
+            // De lo contrario registramos el evento.
             collection[eventName] = service;
         };
     };

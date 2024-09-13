@@ -30,9 +30,9 @@ class EventSystem {
 
         let regex = /([0-9\W\s])/g;
 
-        if(regex.test(eventName)){
+        if(typeof eventName !== "string" || regex.test(eventName)){
             console.warn(`Input: ${eventName}`);
-            throw Error("El nombre de evento << eventName >>, no puede contener números,carácteres especiales ni espacios.");
+            throw Error("El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios.");
         };
 
         // Validamos que sea el tipo de dato correcto: String.

@@ -24,8 +24,15 @@ class EventSystem {
         let { view, service} = configuration;
 
         // Validar la existencia de las propiedades.
-        if(!view || !service){
-            throw Error("Las propiedades << view >> y << service >> son requeridas.")
+        if(!eventName || !view || !service){
+            throw Error("Las propiedades eventName,view,service son requeridas.")
+        };
+
+        let regex = /([0-9\W\s])/g;
+
+        if(regex.test(eventName)){
+            console.warn(`Input: ${eventName}`);
+            throw Error("El nombre de evento, no puede contener números,carácteres especiales ni espacios.");
         };
 
         // Validamos que sea el tipo de dato correcto: String.

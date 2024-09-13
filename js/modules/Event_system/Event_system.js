@@ -23,7 +23,6 @@ class EventSystem {
     #validateProperties(eventName,configuration){
         let { view, service} = configuration;
 
-        // Validar la existencia de las propiedades.
         if(!eventName || !view || !service){
             throw Error("Las propiedades eventName,view,service son requeridas.")
         };
@@ -35,12 +34,11 @@ class EventSystem {
             throw Error("El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios.");
         };
 
-        // Validamos que sea el tipo de dato correcto: String.
-        if(typeof view !== "string"){
-            throw Error(`la propiedad << view >> debe ser de tipo string, recibido: << ${typeof view} >>`);
+        if(typeof view !== "string" || regex.test(view)){
+            console.warn(`Input: ${view}`);
+            throw Error(`la vista << view >> debe ser de tipo string, y no debe contener números,carácteres especiales ni espacios.`);
         };
 
-        // Validamos que sea el tipo de dato correcto: function.
         if(typeof service !== "function"){
             throw Error(`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`);
         };

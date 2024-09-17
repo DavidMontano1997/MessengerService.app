@@ -24,10 +24,10 @@ class EventSystem {
         let { view, service} = configuration;
 
         if(!eventName || !view || !service){
-            throw Error("Las propiedades eventName,view,service son requeridas.")
+            throw Error("Las propiedades eventName,view,service son requeridas.");
         };
 
-        let regex = /([0-9\W\s])/g;
+        let regex = /[0-9A-Z\W\s]/g;
 
         if(typeof eventName !== "string" || regex.test(eventName)){
             console.warn(`Input: ${eventName}`);
@@ -45,7 +45,7 @@ class EventSystem {
     };
 
     #cleanString(string){
-        return string.toLowerCase().trim();
+        return string.trim();
     };
 
     registerEvent(eventName,configuration){
@@ -55,14 +55,14 @@ class EventSystem {
         
         let { view, service} = configuration;
 
-        // limpiamos la cadenas de texto.
         eventName = this.#cleanString(eventName);
         view      = this.#cleanString(view);
 
         // validamos el tipo de dato de las propiedades.
         this.#validateProperties(eventName,configuration);
 
-        let collection = this.#events[view]; // los eventos son categorizados/agrupados por vista.
+        // los eventos son categorizados/agrupados por vista, para tener un mejor orden y evitar colisiones de eventos.
+        let collection = this.#events[view];  
 
         if(!collection) {
             this.#events[view] = { [eventName] : service };
@@ -72,7 +72,7 @@ class EventSystem {
             const coinciden = Object.keys(collection).includes(eventName);
 
             if(coinciden){
-                throw Error(`Ya existe ese nombre de evento: ${eventName}`);
+                throw Error(`EL nombre de evento: ${eventName}, ya existe. Definie otro nombre para evitar colisiones.`);
             };
 
             // De lo contrario registramos el evento.

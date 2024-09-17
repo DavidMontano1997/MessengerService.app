@@ -79,6 +79,17 @@ class EventSystem {
             collection[eventName] = service;
         };
     };
+
+    #showError(data){
+        // inptu : valor recibido.
+        // action : ¿Que se esta tratando de hacer?.
+        // message : descripción del error.
+        const { input, action, message } = data;
+
+        console.warn(`Input: ${input}`);
+        console.warn(`contexto: ${action}`);
+        throw Error(message);
+    };
 };
 
 export default EventSystem;

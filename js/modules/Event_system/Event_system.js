@@ -24,7 +24,10 @@ class EventSystem {
         let { view, service} = configuration;
 
         if(!eventName || !view || !service){
-            throw Error("Las propiedades eventName,view,service son requeridas.");
+            this.#showError({
+                action: "Registro de evento", 
+                message:"Las propiedades eventName,view,service son requeridas."
+            });
         };
 
         let regex = /[0-9A-Z\W\s]/g;
@@ -81,13 +84,13 @@ class EventSystem {
     };
 
     #showError(data){
-        // inptu : valor recibido.
-        // action : ¿Que se esta tratando de hacer?.
+        // inptu   : valor recibido.
+        // action  : ¿Que se esta tratando de hacer?.
         // message : descripción del error.
         const { input, action, message } = data;
 
-        console.warn(`Input: ${input}`);
-        console.warn(`contexto: ${action}`);
+        if(input) console.warn(`Input: ${input}`)
+        console.warn(`context: ${action}`);
         throw Error(message);
     };
 };

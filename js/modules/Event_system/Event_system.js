@@ -23,9 +23,12 @@ class EventSystem {
     #validateProperties(eventName,configuration){
         let { view, service} = configuration;
 
+        const action = "Registro de evento"; // Identifica el contexto/acción de lo que se esta tratando de hacer 
+        // para dar más detalle al momento de mostrar un error.
+
         if(!eventName || !view || !service){
             this.#showError({
-                action: "Registro de evento", 
+                action, 
                 message:"Las propiedades eventName,view,service son requeridas."
             });
         };
@@ -35,7 +38,7 @@ class EventSystem {
         if(typeof eventName !== "string" || regex.test(eventName)){
             this.#showError({
                 input:eventName,
-                action: "Registro de evento",
+                action,
                 message: "El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios."
             });
         };
@@ -43,7 +46,7 @@ class EventSystem {
         if(typeof view !== "string" || regex.test(view)){
             this.#showError({
                 input:view,
-                action: "Registro de evento",
+                action,
                 message: "la vista << view >> debe ser de tipo string, y no debe contener números,carácteres especiales ni espacios."
             });
         };
@@ -51,7 +54,7 @@ class EventSystem {
         if(typeof service !== "function"){
             this.#showError({
                 input:service,
-                action: "Registro de un evento",
+                action,
                 message:`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`
             });
         };

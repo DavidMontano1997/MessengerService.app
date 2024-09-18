@@ -28,6 +28,7 @@ class EventSystem {
 
         if(!eventName || !view || !service){
             this.#showError({
+                eventName,
                 action, 
                 message:"Las propiedades eventName,view,service son requeridas."
             });
@@ -37,6 +38,7 @@ class EventSystem {
 
         if(typeof eventName !== "string" || regex.test(eventName)){
             this.#showError({
+                eventName,
                 input:eventName,
                 action,
                 message: "El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios."
@@ -45,6 +47,7 @@ class EventSystem {
 
         if(typeof view !== "string" || regex.test(view)){
             this.#showError({
+                eventName,
                 input:view,
                 action,
                 message: "la vista << view >> debe ser de tipo string, y no debe contener números,carácteres especiales ni espacios."
@@ -53,6 +56,7 @@ class EventSystem {
 
         if(typeof service !== "function"){
             this.#showError({
+                eventName,
                 input:service,
                 action,
                 message:`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`
@@ -100,12 +104,12 @@ class EventSystem {
         // inptu   : valor recibido.
         // action  : ¿Que se esta tratando de hacer?.
         // message : descripción del error.
-        const { input, action, message } = data;
+        const { eventName, input, action, message } = data;
 
-        let error = ` context: ${action} \n`;
+        let error = ` event: ${eventName} \n context: ${action} \n`;
 
         if(input) error += ` input: ${input}`;
-        console.warn(error)
+        console.warn(error);
         throw Error(message);
     };
 };

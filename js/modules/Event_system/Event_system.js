@@ -33,17 +33,27 @@ class EventSystem {
         let regex = /[0-9A-Z\W\s]/g;
 
         if(typeof eventName !== "string" || regex.test(eventName)){
-            console.warn(`Input: ${eventName}`);
-            throw Error("El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios.");
+            this.#showError({
+                input:eventName,
+                action: "Registro de evento",
+                message: "El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios."
+            });
         };
 
         if(typeof view !== "string" || regex.test(view)){
-            console.warn(`Input: ${view}`);
-            throw Error(`la vista << view >> debe ser de tipo string, y no debe contener números,carácteres especiales ni espacios.`);
+            this.#showError({
+                input:view,
+                action: "Registro de evento",
+                message: "la vista << view >> debe ser de tipo string, y no debe contener números,carácteres especiales ni espacios."
+            });
         };
 
         if(typeof service !== "function"){
-            throw Error(`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`);
+            this.#showError({
+                input:service,
+                action: "Registro de un evento",
+                message:`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`
+            });
         };
     };
 

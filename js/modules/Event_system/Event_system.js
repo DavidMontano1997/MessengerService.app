@@ -102,8 +102,10 @@ class EventSystem {
         // message : descripción del error.
         const { input, action, message } = data;
 
-        if(input) console.warn(`Input: ${input}`)
-        console.warn(`context: ${action}`);
+        let error = ` context: ${action} \n`;
+
+        if(input) error += ` input: ${input}`;
+        console.warn(error)
         throw Error(message);
     };
 };

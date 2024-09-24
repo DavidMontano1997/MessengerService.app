@@ -112,6 +112,47 @@ class EventSystem {
         console.warn(error);
         throw Error(message);
     };
+
+    emitEvents(eventName,infoEvent){
+        const { view, data } = infoEvent;
+        const action = "Emitir un evento";
+
+        try {
+            if(!eventName || !view){
+                this.#showError({
+                    action,
+                    message: "Las propiedades eventName,view son requeridas."
+                });
+            };
+
+            const category = this.#events[view]; // Categoría/grupo al que pertenece el evento.
+            
+            if(!category){
+                this.#showError({
+                    eventName,
+                    inptu: view,
+                    action,
+                    message: "La vista no esta registrada."
+                });
+            };
+            
+            const callback  = category[eventName];
+
+            if(!callback){
+                this.#showError({
+                    eventName,
+                    input: eventName,
+                    action,
+                    message: "El evento que solicitas no existe en los registro del sistema de eventos."
+                });
+            }; 
+
+            callback(data ? data : false);
+        } catch (error) {
+            alert(`Error: Algo salió mal al tratar de ejecutar un evento.`); // Para esto se implementara un mensaje de alerta mas personalizado en un futuro.
+            console.error(error);
+        };
+    };
 };
 
 export default EventSystem;

@@ -72,31 +72,34 @@ class EventSystem {
         // eventName: nombre del evento.
         // view     : la vista a la que va a pertencer el evento.
         // service  : servicio/funcion a ejecutar.
-        
         let { view, service} = configuration;
 
-        eventName = this.#cleanString(eventName);
-        view      = this.#cleanString(view);
-
-        // validamos el tipo de dato de las propiedades.
-        this.#validateProperties(eventName,configuration);
-
-        // los eventos son categorizados/agrupados por vista, para tener un mejor orden y evitar colisiones de eventos.
-        let collection = this.#events[view];  
-
-        if(!collection) {
-            this.#events[view] = { [eventName] : service };
-        } else {
-
-            // Determinamos si ya hay un evento con el mismo nombre.
-            const coinciden = Object.keys(collection).includes(eventName);
-
-            if(coinciden){
-                throw Error(`EL nombre de evento: ${eventName}, ya existe. Definie otro nombre para evitar colisiones.`);
+        try {
+            eventName = this.#cleanString(eventName);
+            view      = this.#cleanString(view);
+    
+            // validamos el tipo de dato de las propiedades.
+            this.#validateProperties(eventName,configuration);
+    
+            // los eventos son categorizados/agrupados por vista, para tener un mejor orden y evitar colisiones de eventos.
+            let collection = this.#events[view];  
+    
+            if(!collection) {
+                this.#events[view] = { [eventName] : service };
+            } else {
+                // Determinamos si ya hay un evento con el mismo nombre.
+                const coinciden = Object.keys(collection).includes(eventName);
+    
+                if(coinciden){
+                    throw Error(`EL nombre de evento: ${eventName}, ya existe. Definie otro nombre para evitar colisiones.`);
+                };
+    
+                // De lo contrario registramos el evento.
+                collection[eventName] = service;
             };
-
-            // De lo contrario registramos el evento.
-            collection[eventName] = service;
+        } catch (error) {
+            alert(`Error: Algo salió mal al tratar de registrar un evento.`);
+            console.error(error);
         };
     };
 

@@ -30,6 +30,7 @@ class EventSystem {
             this.#showError({
                 eventName,
                 action, 
+                view,
                 message:"Las propiedades eventName,view,service son requeridas."
             });
         };
@@ -40,6 +41,7 @@ class EventSystem {
             this.#showError({
                 eventName,
                 action,
+                view,
                 message: "El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios."
             });
         };
@@ -48,6 +50,7 @@ class EventSystem {
             this.#showError({
                 eventName,
                 action,
+                view,
                 message: "la vista << view >> debe ser de tipo string, y no debe contener números,carácteres especiales ni espacios."
             });
         };
@@ -56,6 +59,7 @@ class EventSystem {
             this.#showError({
                 eventName,
                 action,
+                view,
                 message:`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`
             });
         };
@@ -104,9 +108,9 @@ class EventSystem {
         // inptu   : valor recibido.
         // action  : ¿Que se esta tratando de hacer?.
         // message : descripción del error.
-        const { eventName, action, message } = data;
+        const { eventName, action, view, message } = data;
 
-        let error = ` event: ${eventName} \n context: ${action} \n`;
+        let error = ` context: ${action} \n event: ${eventName ? eventName : undefined} \n view: ${view ? view : undefined} \n`;
 
         console.warn(error);
         throw Error(message);
@@ -119,7 +123,9 @@ class EventSystem {
         try {
             if(!eventName || !view){
                 this.#showError({
+                    eventName,
                     action,
+                    view,
                     message: "Las propiedades eventName,view son requeridas."
                 });
             };
@@ -130,6 +136,7 @@ class EventSystem {
                 this.#showError({
                     eventName,
                     action,
+                    view,
                     message: "La vista no esta registrada."
                 });
             };
@@ -140,6 +147,7 @@ class EventSystem {
                 this.#showError({
                     eventName,
                     action,
+                    view,
                     message: "El evento que solicitas no existe en los registro del sistema de eventos."
                 });
             }; 

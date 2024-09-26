@@ -23,7 +23,7 @@ class EventSystem {
     #validateProperties(eventName,configuration){
         let { view, service} = configuration;
 
-        const action = "Registro de evento"; // Identifica el contexto/acción de lo que se esta tratando de hacer 
+        const action = "REGISTRO DE EVENTO"; // Identifica el contexto/acción de lo que se esta tratando de hacer 
         // para dar más detalle al momento de mostrar un error.
 
         if(!eventName || !view || !service){
@@ -114,7 +114,7 @@ class EventSystem {
 
     emitEvents(eventName,infoEvent){
         const { view, data } = infoEvent;
-        const action = "Emitir un evento";
+        const action = "EJECUCION DE EVENTO";
 
         try {
             if(!eventName || !view){

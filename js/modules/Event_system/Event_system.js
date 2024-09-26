@@ -39,7 +39,6 @@ class EventSystem {
         if(typeof eventName !== "string" || regex.test(eventName)){
             this.#showError({
                 eventName,
-                input:eventName,
                 action,
                 message: "El nombre de evento << eventName >> debe ser de tipo string y no debe contener números,carácteres especiales ni espacios."
             });
@@ -48,7 +47,6 @@ class EventSystem {
         if(typeof view !== "string" || regex.test(view)){
             this.#showError({
                 eventName,
-                input:view,
                 action,
                 message: "la vista << view >> debe ser de tipo string, y no debe contener números,carácteres especiales ni espacios."
             });
@@ -57,7 +55,6 @@ class EventSystem {
         if(typeof service !== "function"){
             this.#showError({
                 eventName,
-                input:service,
                 action,
                 message:`la propiedad << service >> debe ser de tipo function, recibido: << ${typeof service} >>`
             });
@@ -107,11 +104,10 @@ class EventSystem {
         // inptu   : valor recibido.
         // action  : ¿Que se esta tratando de hacer?.
         // message : descripción del error.
-        const { eventName, input, action, message } = data;
+        const { eventName, action, message } = data;
 
         let error = ` event: ${eventName} \n context: ${action} \n`;
 
-        if(input) error += ` input: ${input}`;
         console.warn(error);
         throw Error(message);
     };
@@ -133,7 +129,6 @@ class EventSystem {
             if(!category){
                 this.#showError({
                     eventName,
-                    inptu: view,
                     action,
                     message: "La vista no esta registrada."
                 });
@@ -144,7 +139,6 @@ class EventSystem {
             if(!callback){
                 this.#showError({
                     eventName,
-                    input: eventName,
                     action,
                     message: "El evento que solicitas no existe en los registro del sistema de eventos."
                 });

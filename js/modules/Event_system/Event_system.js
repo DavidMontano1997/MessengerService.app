@@ -117,7 +117,7 @@ class EventSystem {
     };
 
     emitEvents(eventName,infoEvent){
-        const { view, data } = infoEvent;
+        const { view, data, context } = infoEvent;
         const action = "EJECUCION DE EVENTO";
 
         try {
@@ -151,6 +151,11 @@ class EventSystem {
                     message: "El evento que solicitas no existe en los registro del sistema de eventos."
                 });
             }; 
+
+            if(context){ // Se define "this", en caso de que el evento lo requiera.
+                callback.call(context,data ? data : false);
+                return;
+            };
 
             callback(data ? data : false);
         } catch (error) {

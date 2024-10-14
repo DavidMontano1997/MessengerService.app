@@ -1,3 +1,5 @@
+import ROUTES from "./routes.js";
+
 class EventSystem {
     static #instance;
     #events = {}; // almacena los eventos.

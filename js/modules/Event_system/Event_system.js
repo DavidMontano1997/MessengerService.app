@@ -22,6 +22,23 @@ class EventSystem {
         return EventSystem.#instance;
     };
 
+    async fileUpload(view){
+        const getCategory = view ? view : "inicio"; // Definimos "inicio" en caso de que no se obtenga una vista
+        // especifica en la ruta puesto que es esta la vista por defautl. (ver router.js)
+
+        if(!this.#events[getCategory]){
+            const getRoute = ROUTES[getCategory];
+
+            try {
+                await import(getRoute);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        return;
+    };
+
     #validateProperties(eventName,configuration){
         let { view, service} = configuration;
 

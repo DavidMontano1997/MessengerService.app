@@ -25,18 +25,34 @@ class EventSystem {
     async fileUpload(view){
         const getCategory = view ? view : "inicio"; // Definimos "inicio" en caso de que no se obtenga una vista
         // especifica en la ruta puesto que es esta la vista por defautl. (ver router.js)
-
+        
         if(!this.#events[getCategory]){
-            const getRoute = ROUTES[getCategory];
+            const route = this.#getFilePath(getCategory); //obtiene la ruta.
 
-            try {
-                await import(getRoute);
-            } catch (error) {
-                console.error(error);
-            }
+            if(route){
+                try {
+                    await import(route);
+                } catch (error) {
+                    console.error(`Error al tratar de cargar el fichero: ${route} \n`,error);
+                    alert(`Error al tratar de cargar el fichero: ${route}`);
+                };
+            } else {
+                console.error(`No se logró cargar fichero de eventos para la vista: <<< ${getCategory} >>.`);
+            };
         };
 
         return;
+    };
+
+    #getFilePath(getCategory){
+        const route = ROUTES[getCategory];
+
+        if(!route){
+            console.warn(`No se encontro un fichero de eventos para la vista: <<< ${getCategory} >>>, Verifica la ruta a la que tratas de acceder.`);
+            return;
+        };
+
+        return route;
     };
 
     #validateProperties(eventName,configuration){

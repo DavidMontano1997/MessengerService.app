@@ -3,6 +3,8 @@ import ROUTES from "./routes.js";
 class EventSystem {
     static #instance;
     #events = {}; // almacena los eventos.
+    // Categorias validas para el registro de eventos.
+    #categoryIndex = ["home","clients","incomeRecord","expenseRecord","reminder","account","configuration"];
 
     constructor(){
         if(EventSystem.#instance){
@@ -121,7 +123,14 @@ class EventSystem {
             let collection = this.#events[view];  
     
             if(!collection) {
-                this.#events[view] = { [eventName] : service };
+                const validityCategory = this.#categoryIndex.includes(view);
+
+                // Validamos que la categoria este registrada en el sistema.
+                if(validityCategory){
+                    this.#events[view] = { [eventName] : service };
+                } else { 
+                    throw Error("La categoría no existe en los registro del sistema de eventos.");
+                }
             } else {
                 // Determinamos si ya hay un evento con el mismo nombre.
                 const coinciden = Object.keys(collection).includes(eventName);

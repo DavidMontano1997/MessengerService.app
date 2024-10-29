@@ -106,10 +106,28 @@ class EventSystem {
         return string.trim();
     };
 
+    #validityCategory(eventName,configuration,action){
+        const { view, service  } = configuration;
+        const existingCategory = this.#categoryIndex.includes(view);
+
+        // Validamos que la categoria este registrada en el sistema.
+        if(existingCategory){
+            this.#events[view] = { [eventName] : service };
+        } else { 
+            this.#showError({
+                eventName, 
+                action, 
+                view,
+                message: "La categoría no existe en los registro del sistema de eventos." 
+            });
+        };
+    };
+
     registerEvent(eventName,configuration){
         // eventName: nombre del evento.
         // view     : la vista a la que va a pertencer el evento.
         // service  : servicio/funcion a ejecutar.
+        const action = "REGISTRO DE EVENTO";
         let { view, service} = configuration;
 
         try {
@@ -123,14 +141,8 @@ class EventSystem {
             let collection = this.#events[view];  
     
             if(!collection) {
-                const validityCategory = this.#categoryIndex.includes(view);
-
-                // Validamos que la categoria este registrada en el sistema.
-                if(validityCategory){
-                    this.#events[view] = { [eventName] : service };
-                } else { 
-                    throw Error("La categoría no existe en los registro del sistema de eventos.");
-                }
+                // Validamos que la categoria sea valida.
+                this.#validityCategory(eventName,configuration,action);
             } else {
                 // Determinamos si ya hay un evento con el mismo nombre.
                 const coinciden = Object.keys(collection).includes(eventName);

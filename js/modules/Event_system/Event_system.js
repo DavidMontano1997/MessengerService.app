@@ -4,7 +4,7 @@ class EventSystem {
     static #instance;
     #events = {}; // almacena los eventos.
     // Categorias validas para el registro de eventos.
-    #categoryIndex = ["home","clients","incomeRecord","expenseRecord","reminder","account","configuration"];
+    #categoryIndex = ["home","clients","income_record","expense_record","reminder","account","configuration"];
 
     constructor(){
         if(EventSystem.#instance){

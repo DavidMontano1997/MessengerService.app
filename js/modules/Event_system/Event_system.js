@@ -123,6 +123,20 @@ class EventSystem {
         };
     };
 
+    #existingCoinciden({ collection,eventName,action,view }){
+        // Determinamos si ya hay un evento con el mismo nombre.
+        const coinciden = Object.keys(collection).includes(eventName);
+
+        if(coinciden){
+            this.#showError({
+                eventName, 
+                action, 
+                view, 
+                message: `EL nombre de evento: ${eventName}, ya existe. Definie otro nombre para evitar colisiones.` 
+            });
+        };
+    };
+
     registerEvent(eventName,configuration){
         // eventName: nombre del evento.
         // view     : la vista a la que va a pertencer el evento.
@@ -144,14 +158,11 @@ class EventSystem {
                 // Validamos que la categoria sea valida.
                 this.#validityCategory(eventName,configuration,action);
             } else {
-                // Determinamos si ya hay un evento con el mismo nombre.
-                const coinciden = Object.keys(collection).includes(eventName);
-    
-                if(coinciden){
-                    throw Error(`EL nombre de evento: ${eventName}, ya existe. Definie otro nombre para evitar colisiones.`);
-                };
-    
-                // De lo contrario registramos el evento.
+                // Consultamos que no haya otro evento con el mismo nombre.
+                const info = { collection,eventName,action,view };
+                this.#existingCoinciden(info);
+
+                // De no haber coincidencias almacenamos el evento.
                 collection[eventName] = service;
             };
         } catch (error) {

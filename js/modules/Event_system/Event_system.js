@@ -106,19 +106,18 @@ class EventSystem {
         return string.trim();
     };
 
-    #validityCategory(eventName,configuration,action){
+    #validityCategory({ eventName,configuration,action }){
         const { view, service  } = configuration;
-        const existingCategory = this.#categoryIndex.includes(view);
 
         // Validamos que la categoria este registrada en el sistema.
-        if(existingCategory){
-            this.#events[view] = { [eventName] : service };
-        } else { 
+        const existingCategory = this.#categoryIndex.includes(view);
+
+        if(!existingCategory){
             this.#showError({
                 eventName, 
                 action, 
                 view,
-                message: "La categoría no existe en los registro del sistema de eventos." 
+                message: "La categoría no esta definida en el indice de categorías del sistema." 
             });
         };
     };
@@ -135,6 +134,18 @@ class EventSystem {
                 message: `EL nombre de evento: ${eventName}, ya existe. Definie otro nombre para evitar colisiones.` 
             });
         };
+    };
+
+    #showError(data){
+        // inptu   : valor recibido.
+        // action  : ¿Que se esta tratando de hacer?.
+        // message : descripción del error.
+        const { eventName, action, view, message } = data;
+
+        let error = ` context: ${action} \n event: ${eventName ? eventName : undefined} \n view: ${view ? view : undefined} \n`;
+
+        console.warn(error);
+        throw Error(message);
     };
 
     registerEvent(eventName,configuration){
@@ -155,8 +166,12 @@ class EventSystem {
             let collection = this.#events[view];  
     
             if(!collection) {
-                // Validamos que la categoria sea valida.
-                this.#validityCategory(eventName,configuration,action);
+                // Validamos que la categoria sea correcta.
+                const info = { eventName,configuration,action }
+                this.#validityCategory(info);
+
+                // De no haber errores almacenamos el evento.
+                this.#events[view] = { [eventName] : service };
             } else {
                 // Consultamos que no haya otro evento con el mismo nombre.
                 const info = { collection,eventName,action,view };
@@ -169,18 +184,6 @@ class EventSystem {
             alert(`Error: Algo salió mal al tratar de registrar un evento.`);
             console.error(error);
         };
-    };
-
-    #showError(data){
-        // inptu   : valor recibido.
-        // action  : ¿Que se esta tratando de hacer?.
-        // message : descripción del error.
-        const { eventName, action, view, message } = data;
-
-        let error = ` context: ${action} \n event: ${eventName ? eventName : undefined} \n view: ${view ? view : undefined} \n`;
-
-        console.warn(error);
-        throw Error(message);
     };
 
     emitEvents(eventName,infoEvent){

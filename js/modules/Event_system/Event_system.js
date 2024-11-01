@@ -24,9 +24,10 @@ class EventSystem {
         return EventSystem.#instance;
     };
 
-    async fileUpload(view){
-        const getCategory = view ? view : "inicio"; // Definimos "inicio" en caso de que no se obtenga una vista
-        // especifica en la ruta puesto que es esta la vista por defautl. (ver router.js)
+    async fileUpload(file){
+        const getCategory = file ? file : "inicio"; // Definimos "inicio" en caso de que no se obtenga una vista
+        // especifica ya que los ficheros se definen en base a la vista que solicite el cliente, de igual forma se puede
+        // cargar un fichero que no este ligado a una vista.
         
         if(!this.#events[getCategory]){
             const route = this.#getFilePath(getCategory); //obtiene la ruta.

@@ -31,7 +31,7 @@ Esta conformado por los siguientes modulos:
 
 3. `routes.js` :Define las rutas a los ficheros que contienen los registros de eventos de cada vista.
 
-    ```
+    ```js
     const ROUTES = {
         inicio: "./EventFiles/home.js",
         clientes: "./EventFiles/clients.js",
@@ -42,7 +42,7 @@ Esta conformado por los siguientes modulos:
 
 4. <a name="registro-de-eventos"></a>Archivos de Registro de Eventos (ejemplo:  `home.js` ) : Cada archivo registra eventos específicos de la vista correspondiente utilizando el sistema central de eventos.
 
-    ```
+    ```js
     // Dependecias
     import EventSystem from "../Event_system.js";
     import ENUMS_EVENT_NAME_HOME from "./Enums_event_name/enums_home.js"; // nombres de eventos.
@@ -62,7 +62,7 @@ Esta conformado por los siguientes modulos:
 
 5. Archivos Enum (ejemplo : `enums_home.js`) : Definen nombres de eventos constantes para evitar errores y garantizar consistencia.
 
-    ```
+    ```js
         const ENUMS_EVENT_NAME_HOME = Object.freeze({
             GET_ANNUAL_INCOME : "get_annual_income"
         });
@@ -87,7 +87,7 @@ Una vez registrada la categoría se puede pasar a [registrar eventos](#registro-
 
 1. **Inicialización** : `index.js` Inicializamos  el sistema de eventos  y se carga el fichero con los eventos a registrar de la vista, la cual se obtiene por medio de [`ROUTER.view`]().
 
-    ```
+    ```js
     import EventSystem from "./modules/Event_system/Event_system.js"; // sistema de eventos.
 
     const EVENTS_COLLECTION = new EventSystem(); // única instancia.
@@ -96,7 +96,7 @@ Una vez registrada la categoría se puede pasar a [registrar eventos](#registro-
 
 2. **Navegación** : Cada vez que el usuario cambia de vista (**hashchange**), se cargan los eventos específicos de esa vista.
 
-    ```
+    ```js
     window.addEventListener("hashchange", async (e) => {
             await ROUTER.startRouter(); // Inicializamos el router para obtener la nueva vista.
             await EVENTS_COLLECTION.fileUpload(ROUTER.view); // Carga de fichero que contienen los eventos de la vista solicitada.
@@ -105,7 +105,7 @@ Una vez registrada la categoría se puede pasar a [registrar eventos](#registro-
 
 3. **Emisión de Eventos** : Los eventos se emiten desde la UI usando **emitEvents**, ejecutando la lógica asociada.
 
-    ```
+    ```js
         // dependencias
         import ENUMS_EVENT_NAME_HOME from "./modules/Event_system/EventFiles/Enums_event_name/enums_home.js"; // nombre de eventos, cada fichero tiene su propio enums.
 

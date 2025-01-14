@@ -1,4 +1,7 @@
-import Router from "./modules/router/router.js";
+import Router from "@router/router.js";
+
+
+console.log(ROUTES);
 
 document.addEventListener("DOMContentLoaded", Main);
 

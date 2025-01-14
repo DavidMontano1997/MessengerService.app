@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./", 
+        "paths": {
+            "@router/router.js": ["js/modules/router/router.js"]
+        }
+    },
+    "exclude": ["node_modules,helpers,DiagramaFlujo"],
+    "include": ["js/**/*"] 
+}

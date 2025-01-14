@@ -1,8 +1,5 @@
 import Router from "@router/router.js";
 
-
-console.log(ROUTES);
-
 document.addEventListener("DOMContentLoaded", Main);
 
 function Main(){

@@ -1,4 +1,4 @@
-import ROUTES from "./routes.js";
+import ROUTES from "@eventSystem/routes.js";
 
 class EventSystem {
     static #instance;

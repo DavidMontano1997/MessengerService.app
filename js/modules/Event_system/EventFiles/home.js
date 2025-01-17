@@ -1,6 +1,7 @@
-import EventSystem from "../Event_system.js";
-import ENUMS_EVENT_NAME_HOME from "./Enums_event_name/enums_home.js"; // nombres de eventos.
-import Logica from "../../../LogicaPRUEBA.js"; // Archivo de prueba: Contiene toda la logica de negocio.
+import EventSystem from "@eventSystem/Event_system.js";
+import ENUMS_EVENT_NAME_HOME from "@eventNames_enums/enums_home.js"; // nombres de eventos.
+import Logica from "../../../../helpers/LogicaPRUEBA.js"; // Archivo de prueba: Contiene toda la logica de negocio.
+
 
 const CATEGORY = "home"; // Definimos la categoria o vista en la cuál se van a registrar los eventos en el
 // sistema.

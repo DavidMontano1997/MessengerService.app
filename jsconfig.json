@@ -2,7 +2,13 @@
     "compilerOptions": {
         "baseUrl": "./", 
         "paths": {
-            "@router/router.js": ["js/modules/router/router.js"]
+            // alias para el router.
+            "@router/router.js": ["js/modules/router/router.js"],
+            
+            // alais para el sistema de eventos.
+            "@eventSystem/Event_system.js": ["js/modules/Event_system/Event_system.js"],
+            "@eventSystem/routes.js": ["js/modules/Event_system/routes.js"],
+            "@eventNames_enums/enums_home.js": ["js/modules/Event_system/EventFiles/event_names/enums_home.js"]
         }
     },
     "exclude": ["node_modules,helpers,DiagramaFlujo"],

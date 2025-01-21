@@ -234,6 +234,13 @@ class EventSystem {
             console.error(error);
         };
     };
+
+    get categoryIndex(){
+        // Retorna las categorias/vistas existentes en las cuales se pueden registrar eventos.
+        return this.#categoryIndex;
+    };
 };
 
-export default EventSystem;
+const CONTROLLER_EVENTS = Object.freeze(new EventSystem());
+
+export default CONTROLLER_EVENTS;

@@ -45,19 +45,18 @@ Esta conformado por los siguientes modulos:
 4. <a name="registro-de-eventos"></a>Archivos de Registro de Eventos (ejemplo:  `home.js` ) : Cada archivo registra eventos específicos de la vista correspondiente utilizando el sistema central de eventos.
 
     ```js
-    // Dependecias
-    import EventSystem from "../Event_system.js";
-    import ENUMS_EVENT_NAME_HOME from "./Enums_event_name/enums_home.js"; // nombres de eventos.
-    import businessLogic from "../../../businessLogic.js"; // Aquí se carga la lógica de negocio(archivo de prueba). 
+    import CONTROLLER_EVENTS from "@eventSystem/Event_system.js"; // sistema de eventos.
+    import ENUMS_EVENT_NAME_HOME from "@eventNames_enums/enums_home.js"; // objecto con los nombres de eventos.
+    import Logica from "../../../../helpers/LogicaPRUEBA.js"; // Archivo de prueba: Contiene toda la logica de negocio.
 
-    const CATEGORY = "home"; // Definimos la categoria o vista en la cuál se van a registrar los eventos en el sistema.
-    const HOME_EVENT_STORE = EventSystem.instance; // obtenemos la única instancia al sistema de eventos.
     const enums = ENUMS_EVENT_NAME_HOME;
 
-    // Registramos  eventos
-    HOME_EVENT_STORE.registerEvent(enums.GET_ANNUAL_INCOME,{
-        view: CATEGORY, 
-        service: businessLogic.annualIncome //servicio o logica.
+    // Definimos la categoría/vista en la que vamos a registrar los eventos.
+    const CATEGORY = CONTROLLER_EVENTS.categoryIndex[0]; // "home"
+
+    CONTROLLER_EVENTS.registerEvent(enums.GET_INCOME_FULL,{
+        view: CATEGORY,
+        service: Logica.getIngresoFull
     });
     ```
 
